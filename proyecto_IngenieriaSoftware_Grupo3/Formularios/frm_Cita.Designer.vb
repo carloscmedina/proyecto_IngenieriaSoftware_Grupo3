@@ -23,18 +23,18 @@ Partial Class frm_Cita
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lbl_num_expediente = New System.Windows.Forms.Label()
-        Me.txt_numero_expediente = New System.Windows.Forms.TextBox()
-        Me.lbl_empleado = New System.Windows.Forms.Label()
-        Me.txt_id_empleado = New System.Windows.Forms.TextBox()
-        Me.txt_nombre_empleado = New System.Windows.Forms.TextBox()
-        Me.dtp_fecha_visita = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtp_fecha_visita = New System.Windows.Forms.DateTimePicker()
+        Me.txt_nombre_empleado = New System.Windows.Forms.TextBox()
+        Me.txt_id_empleado = New System.Windows.Forms.TextBox()
+        Me.lbl_empleado = New System.Windows.Forms.Label()
+        Me.txt_numero_expediente = New System.Windows.Forms.TextBox()
+        Me.lbl_num_expediente = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,64 +58,26 @@ Partial Class frm_Cita
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
-        'lbl_num_expediente
+        'CheckBox1
         '
-        Me.lbl_num_expediente.AutoSize = True
-        Me.lbl_num_expediente.Location = New System.Drawing.Point(71, 44)
-        Me.lbl_num_expediente.Name = "lbl_num_expediente"
-        Me.lbl_num_expediente.Size = New System.Drawing.Size(128, 15)
-        Me.lbl_num_expediente.TabIndex = 0
-        Me.lbl_num_expediente.Text = "Numero de Expediente"
-        Me.lbl_num_expediente.UseMnemonic = False
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(358, 336)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(85, 19)
+        Me.CheckBox1.TabIndex = 9
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'txt_numero_expediente
+        'RadioButton1
         '
-        Me.txt_numero_expediente.Location = New System.Drawing.Point(226, 41)
-        Me.txt_numero_expediente.Name = "txt_numero_expediente"
-        Me.txt_numero_expediente.Size = New System.Drawing.Size(100, 23)
-        Me.txt_numero_expediente.TabIndex = 1
-        '
-        'lbl_empleado
-        '
-        Me.lbl_empleado.AutoSize = True
-        Me.lbl_empleado.Location = New System.Drawing.Point(71, 77)
-        Me.lbl_empleado.Name = "lbl_empleado"
-        Me.lbl_empleado.Size = New System.Drawing.Size(60, 15)
-        Me.lbl_empleado.TabIndex = 2
-        Me.lbl_empleado.Text = "Empleado"
-        Me.lbl_empleado.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.lbl_empleado.UseMnemonic = False
-        '
-        'txt_id_empleado
-        '
-        Me.txt_id_empleado.Location = New System.Drawing.Point(226, 77)
-        Me.txt_id_empleado.Name = "txt_id_empleado"
-        Me.txt_id_empleado.Size = New System.Drawing.Size(61, 23)
-        Me.txt_id_empleado.TabIndex = 3
-        '
-        'txt_nombre_empleado
-        '
-        Me.txt_nombre_empleado.Location = New System.Drawing.Point(293, 77)
-        Me.txt_nombre_empleado.Name = "txt_nombre_empleado"
-        Me.txt_nombre_empleado.Size = New System.Drawing.Size(194, 23)
-        Me.txt_nombre_empleado.TabIndex = 4
-        '
-        'dtp_fecha_visita
-        '
-        Me.dtp_fecha_visita.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_fecha_visita.Location = New System.Drawing.Point(226, 118)
-        Me.dtp_fecha_visita.Name = "dtp_fecha_visita"
-        Me.dtp_fecha_visita.Size = New System.Drawing.Size(100, 23)
-        Me.dtp_fecha_visita.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(71, 125)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 15)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Label1"
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(226, 337)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(97, 19)
+        Me.RadioButton1.TabIndex = 8
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -137,26 +99,64 @@ Partial Class frm_Cita
         Me.Column2.HeaderText = "Column2"
         Me.Column2.Name = "Column2"
         '
-        'RadioButton1
+        'Label1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(226, 337)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(97, 19)
-        Me.RadioButton1.TabIndex = 8
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(71, 125)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 15)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Label1"
         '
-        'CheckBox1
+        'dtp_fecha_visita
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(358, 336)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(85, 19)
-        Me.CheckBox1.TabIndex = 9
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.dtp_fecha_visita.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_fecha_visita.Location = New System.Drawing.Point(226, 118)
+        Me.dtp_fecha_visita.Name = "dtp_fecha_visita"
+        Me.dtp_fecha_visita.Size = New System.Drawing.Size(100, 23)
+        Me.dtp_fecha_visita.TabIndex = 5
+        '
+        'txt_nombre_empleado
+        '
+        Me.txt_nombre_empleado.Location = New System.Drawing.Point(293, 77)
+        Me.txt_nombre_empleado.Name = "txt_nombre_empleado"
+        Me.txt_nombre_empleado.Size = New System.Drawing.Size(194, 23)
+        Me.txt_nombre_empleado.TabIndex = 4
+        '
+        'txt_id_empleado
+        '
+        Me.txt_id_empleado.Location = New System.Drawing.Point(226, 77)
+        Me.txt_id_empleado.Name = "txt_id_empleado"
+        Me.txt_id_empleado.Size = New System.Drawing.Size(61, 23)
+        Me.txt_id_empleado.TabIndex = 3
+        '
+        'lbl_empleado
+        '
+        Me.lbl_empleado.AutoSize = True
+        Me.lbl_empleado.Location = New System.Drawing.Point(71, 77)
+        Me.lbl_empleado.Name = "lbl_empleado"
+        Me.lbl_empleado.Size = New System.Drawing.Size(60, 15)
+        Me.lbl_empleado.TabIndex = 2
+        Me.lbl_empleado.Text = "Empleado"
+        Me.lbl_empleado.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lbl_empleado.UseMnemonic = False
+        '
+        'txt_numero_expediente
+        '
+        Me.txt_numero_expediente.Location = New System.Drawing.Point(226, 41)
+        Me.txt_numero_expediente.Name = "txt_numero_expediente"
+        Me.txt_numero_expediente.Size = New System.Drawing.Size(100, 23)
+        Me.txt_numero_expediente.TabIndex = 1
+        '
+        'lbl_num_expediente
+        '
+        Me.lbl_num_expediente.AutoSize = True
+        Me.lbl_num_expediente.Location = New System.Drawing.Point(71, 44)
+        Me.lbl_num_expediente.Name = "lbl_num_expediente"
+        Me.lbl_num_expediente.Size = New System.Drawing.Size(128, 15)
+        Me.lbl_num_expediente.TabIndex = 0
+        Me.lbl_num_expediente.Text = "Numero de Expediente"
+        Me.lbl_num_expediente.UseMnemonic = False
         '
         'frm_Cita
         '
