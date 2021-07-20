@@ -72,7 +72,7 @@ Partial Class frm_Medico
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(606, 281)
+        Me.GroupBox1.Size = New System.Drawing.Size(606, 264)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -165,7 +165,7 @@ Partial Class frm_Medico
         'rdb_inactivo_medico
         '
         Me.rdb_inactivo_medico.AutoSize = True
-        Me.rdb_inactivo_medico.Location = New System.Drawing.Point(517, 48)
+        Me.rdb_inactivo_medico.Location = New System.Drawing.Point(454, 52)
         Me.rdb_inactivo_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdb_inactivo_medico.Name = "rdb_inactivo_medico"
         Me.rdb_inactivo_medico.Size = New System.Drawing.Size(82, 24)
@@ -177,7 +177,7 @@ Partial Class frm_Medico
         'rdb_activo_medico
         '
         Me.rdb_activo_medico.AutoSize = True
-        Me.rdb_activo_medico.Location = New System.Drawing.Point(517, 16)
+        Me.rdb_activo_medico.Location = New System.Drawing.Point(454, 20)
         Me.rdb_activo_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdb_activo_medico.Name = "rdb_activo_medico"
         Me.rdb_activo_medico.Size = New System.Drawing.Size(72, 24)
@@ -189,7 +189,7 @@ Partial Class frm_Medico
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(437, 20)
+        Me.Label2.Location = New System.Drawing.Point(382, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(54, 20)
         Me.Label2.TabIndex = 1
@@ -268,7 +268,7 @@ Partial Class frm_Medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(624, 321)
+        Me.ClientSize = New System.Drawing.Size(624, 298)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
