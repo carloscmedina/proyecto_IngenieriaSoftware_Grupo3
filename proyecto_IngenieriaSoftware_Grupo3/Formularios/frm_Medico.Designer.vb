@@ -22,30 +22,38 @@ Partial Class frm_Medico
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Medico))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btn_Salir = New System.Windows.Forms.Button()
-        Me.btn_Limpiar = New System.Windows.Forms.Button()
-        Me.btn_Guardar = New System.Windows.Forms.Button()
+        Me.txt_registro_medico = New System.Windows.Forms.TextBox()
+        Me.lbl_registro_medico = New System.Windows.Forms.Label()
+        Me.dtp_fechanacimiento_medico = New System.Windows.Forms.DateTimePicker()
+        Me.txt_apellidos_medico = New System.Windows.Forms.TextBox()
+        Me.txt_nombre_medico = New System.Windows.Forms.TextBox()
+        Me.txt_cedula_medico = New System.Windows.Forms.TextBox()
+        Me.lbl_fechanac_medico = New System.Windows.Forms.Label()
+        Me.lbl_nombre_medico = New System.Windows.Forms.Label()
+        Me.lbl_apellido_medico = New System.Windows.Forms.Label()
+        Me.lbl_cedula_medico = New System.Windows.Forms.Label()
         Me.rdb_inactivo_medico = New System.Windows.Forms.RadioButton()
         Me.rdb_activo_medico = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cbx_id_medico = New System.Windows.Forms.ComboBox()
-        Me.lbl_cedula_medico = New System.Windows.Forms.Label()
-        Me.lbl_apellido_medico = New System.Windows.Forms.Label()
-        Me.lbl_nombre_medico = New System.Windows.Forms.Label()
-        Me.lbl_fechanac_medico = New System.Windows.Forms.Label()
-        Me.txt_cedula_medico = New System.Windows.Forms.TextBox()
-        Me.txt_nombre_medico = New System.Windows.Forms.TextBox()
-        Me.txt_apellidos_medico = New System.Windows.Forms.TextBox()
-        Me.dtp_fechanacimiento_medico = New System.Windows.Forms.DateTimePicker()
-        Me.lbl_registro_medico = New System.Windows.Forms.Label()
-        Me.txt_registro_medico = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GrabarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.txt_registro_medico)
         Me.GroupBox1.Controls.Add(Me.lbl_registro_medico)
         Me.GroupBox1.Controls.Add(Me.dtp_fechanacimiento_medico)
@@ -56,54 +64,111 @@ Partial Class frm_Medico
         Me.GroupBox1.Controls.Add(Me.lbl_nombre_medico)
         Me.GroupBox1.Controls.Add(Me.lbl_apellido_medico)
         Me.GroupBox1.Controls.Add(Me.lbl_cedula_medico)
-        Me.GroupBox1.Controls.Add(Me.cbx_id_medico)
-        Me.GroupBox1.Controls.Add(Me.btn_Salir)
-        Me.GroupBox1.Controls.Add(Me.btn_Limpiar)
-        Me.GroupBox1.Controls.Add(Me.btn_Guardar)
         Me.GroupBox1.Controls.Add(Me.rdb_inactivo_medico)
         Me.GroupBox1.Controls.Add(Me.rdb_activo_medico)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 7)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 26)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(779, 431)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(606, 281)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "MÉDICO"
         '
-        'btn_Salir
+        'txt_registro_medico
         '
-        Me.btn_Salir.Location = New System.Drawing.Point(547, 337)
-        Me.btn_Salir.Name = "btn_Salir"
-        Me.btn_Salir.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Salir.TabIndex = 8
-        Me.btn_Salir.Text = "Salir"
-        Me.btn_Salir.UseVisualStyleBackColor = True
+        Me.txt_registro_medico.Location = New System.Drawing.Point(180, 21)
+        Me.txt_registro_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_registro_medico.Name = "txt_registro_medico"
+        Me.txt_registro_medico.Size = New System.Drawing.Size(138, 27)
+        Me.txt_registro_medico.TabIndex = 21
         '
-        'btn_Limpiar
+        'lbl_registro_medico
         '
-        Me.btn_Limpiar.Location = New System.Drawing.Point(368, 337)
-        Me.btn_Limpiar.Name = "btn_Limpiar"
-        Me.btn_Limpiar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Limpiar.TabIndex = 7
-        Me.btn_Limpiar.Text = "Eliminar"
-        Me.btn_Limpiar.UseVisualStyleBackColor = True
+        Me.lbl_registro_medico.AutoSize = True
+        Me.lbl_registro_medico.Location = New System.Drawing.Point(17, 24)
+        Me.lbl_registro_medico.Name = "lbl_registro_medico"
+        Me.lbl_registro_medico.Size = New System.Drawing.Size(139, 20)
+        Me.lbl_registro_medico.TabIndex = 20
+        Me.lbl_registro_medico.Text = "N° Registro Médico"
         '
-        'btn_Guardar
+        'dtp_fechanacimiento_medico
         '
-        Me.btn_Guardar.Location = New System.Drawing.Point(194, 337)
-        Me.btn_Guardar.Name = "btn_Guardar"
-        Me.btn_Guardar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Guardar.TabIndex = 6
-        Me.btn_Guardar.Text = "Guardar"
-        Me.btn_Guardar.UseVisualStyleBackColor = True
+        Me.dtp_fechanacimiento_medico.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_fechanacimiento_medico.Location = New System.Drawing.Point(180, 223)
+        Me.dtp_fechanacimiento_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dtp_fechanacimiento_medico.Name = "dtp_fechanacimiento_medico"
+        Me.dtp_fechanacimiento_medico.Size = New System.Drawing.Size(138, 27)
+        Me.dtp_fechanacimiento_medico.TabIndex = 18
+        '
+        'txt_apellidos_medico
+        '
+        Me.txt_apellidos_medico.Location = New System.Drawing.Point(180, 178)
+        Me.txt_apellidos_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_apellidos_medico.Name = "txt_apellidos_medico"
+        Me.txt_apellidos_medico.Size = New System.Drawing.Size(409, 27)
+        Me.txt_apellidos_medico.TabIndex = 17
+        '
+        'txt_nombre_medico
+        '
+        Me.txt_nombre_medico.Location = New System.Drawing.Point(180, 140)
+        Me.txt_nombre_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_nombre_medico.Name = "txt_nombre_medico"
+        Me.txt_nombre_medico.Size = New System.Drawing.Size(409, 27)
+        Me.txt_nombre_medico.TabIndex = 16
+        '
+        'txt_cedula_medico
+        '
+        Me.txt_cedula_medico.Location = New System.Drawing.Point(180, 99)
+        Me.txt_cedula_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txt_cedula_medico.Name = "txt_cedula_medico"
+        Me.txt_cedula_medico.Size = New System.Drawing.Size(138, 27)
+        Me.txt_cedula_medico.TabIndex = 15
+        '
+        'lbl_fechanac_medico
+        '
+        Me.lbl_fechanac_medico.AutoSize = True
+        Me.lbl_fechanac_medico.Location = New System.Drawing.Point(19, 228)
+        Me.lbl_fechanac_medico.Name = "lbl_fechanac_medico"
+        Me.lbl_fechanac_medico.Size = New System.Drawing.Size(149, 20)
+        Me.lbl_fechanac_medico.TabIndex = 14
+        Me.lbl_fechanac_medico.Text = "Fecha de Nacimiento"
+        '
+        'lbl_nombre_medico
+        '
+        Me.lbl_nombre_medico.AutoSize = True
+        Me.lbl_nombre_medico.Location = New System.Drawing.Point(19, 181)
+        Me.lbl_nombre_medico.Name = "lbl_nombre_medico"
+        Me.lbl_nombre_medico.Size = New System.Drawing.Size(70, 20)
+        Me.lbl_nombre_medico.TabIndex = 13
+        Me.lbl_nombre_medico.Text = "Nombres"
+        '
+        'lbl_apellido_medico
+        '
+        Me.lbl_apellido_medico.AutoSize = True
+        Me.lbl_apellido_medico.Location = New System.Drawing.Point(17, 143)
+        Me.lbl_apellido_medico.Name = "lbl_apellido_medico"
+        Me.lbl_apellido_medico.Size = New System.Drawing.Size(72, 20)
+        Me.lbl_apellido_medico.TabIndex = 12
+        Me.lbl_apellido_medico.Text = "Apellidos"
+        '
+        'lbl_cedula_medico
+        '
+        Me.lbl_cedula_medico.AutoSize = True
+        Me.lbl_cedula_medico.Location = New System.Drawing.Point(17, 102)
+        Me.lbl_cedula_medico.Name = "lbl_cedula_medico"
+        Me.lbl_cedula_medico.Size = New System.Drawing.Size(55, 20)
+        Me.lbl_cedula_medico.TabIndex = 10
+        Me.lbl_cedula_medico.Text = "Cédula"
         '
         'rdb_inactivo_medico
         '
         Me.rdb_inactivo_medico.AutoSize = True
-        Me.rdb_inactivo_medico.Location = New System.Drawing.Point(280, 32)
+        Me.rdb_inactivo_medico.Location = New System.Drawing.Point(517, 48)
+        Me.rdb_inactivo_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdb_inactivo_medico.Name = "rdb_inactivo_medico"
-        Me.rdb_inactivo_medico.Size = New System.Drawing.Size(67, 19)
+        Me.rdb_inactivo_medico.Size = New System.Drawing.Size(82, 24)
         Me.rdb_inactivo_medico.TabIndex = 5
         Me.rdb_inactivo_medico.TabStop = True
         Me.rdb_inactivo_medico.Text = "Inactivo"
@@ -112,9 +177,10 @@ Partial Class frm_Medico
         'rdb_activo_medico
         '
         Me.rdb_activo_medico.AutoSize = True
-        Me.rdb_activo_medico.Location = New System.Drawing.Point(194, 32)
+        Me.rdb_activo_medico.Location = New System.Drawing.Point(517, 16)
+        Me.rdb_activo_medico.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.rdb_activo_medico.Name = "rdb_activo_medico"
-        Me.rdb_activo_medico.Size = New System.Drawing.Size(59, 19)
+        Me.rdb_activo_medico.Size = New System.Drawing.Size(72, 24)
         Me.rdb_activo_medico.TabIndex = 4
         Me.rdb_activo_medico.TabStop = True
         Me.rdb_activo_medico.Text = "Activo"
@@ -123,121 +189,97 @@ Partial Class frm_Medico
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(35, 34)
+        Me.Label2.Location = New System.Drawing.Point(437, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 15)
+        Me.Label2.Size = New System.Drawing.Size(54, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Estado:"
+        Me.Label2.Text = "Estado"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(35, 91)
+        Me.Label1.Location = New System.Drawing.Point(17, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 15)
+        Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID Médico:"
+        Me.Label1.Text = "ID Médico"
         '
-        'cbx_id_medico
+        'MenuStrip1
         '
-        Me.cbx_id_medico.FormattingEnabled = True
-        Me.cbx_id_medico.Location = New System.Drawing.Point(194, 91)
-        Me.cbx_id_medico.Name = "cbx_id_medico"
-        Me.cbx_id_medico.Size = New System.Drawing.Size(121, 23)
-        Me.cbx_id_medico.TabIndex = 9
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.GrabarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.CancelarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(624, 28)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'lbl_cedula_medico
+        'ConsultarToolStripMenuItem
         '
-        Me.lbl_cedula_medico.AutoSize = True
-        Me.lbl_cedula_medico.Location = New System.Drawing.Point(35, 127)
-        Me.lbl_cedula_medico.Name = "lbl_cedula_medico"
-        Me.lbl_cedula_medico.Size = New System.Drawing.Size(47, 15)
-        Me.lbl_cedula_medico.TabIndex = 10
-        Me.lbl_cedula_medico.Text = "Cédula:"
+        Me.ConsultarToolStripMenuItem.Image = CType(resources.GetObject("ConsultarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
-        'lbl_apellido_medico
+        'GrabarToolStripMenuItem
         '
-        Me.lbl_apellido_medico.AutoSize = True
-        Me.lbl_apellido_medico.Location = New System.Drawing.Point(35, 205)
-        Me.lbl_apellido_medico.Name = "lbl_apellido_medico"
-        Me.lbl_apellido_medico.Size = New System.Drawing.Size(59, 15)
-        Me.lbl_apellido_medico.TabIndex = 12
-        Me.lbl_apellido_medico.Text = "Apellidos:"
+        Me.GrabarToolStripMenuItem.Image = CType(resources.GetObject("GrabarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.GrabarToolStripMenuItem.Name = "GrabarToolStripMenuItem"
+        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
+        Me.GrabarToolStripMenuItem.Text = "Grabar"
         '
-        'lbl_nombre_medico
+        'ModificarToolStripMenuItem
         '
-        Me.lbl_nombre_medico.AutoSize = True
-        Me.lbl_nombre_medico.Location = New System.Drawing.Point(35, 169)
-        Me.lbl_nombre_medico.Name = "lbl_nombre_medico"
-        Me.lbl_nombre_medico.Size = New System.Drawing.Size(59, 15)
-        Me.lbl_nombre_medico.TabIndex = 13
-        Me.lbl_nombre_medico.Text = "Nombres:"
+        Me.ModificarToolStripMenuItem.Image = CType(resources.GetObject("ModificarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
+        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
-        'lbl_fechanac_medico
+        'CancelarToolStripMenuItem
         '
-        Me.lbl_fechanac_medico.AutoSize = True
-        Me.lbl_fechanac_medico.Location = New System.Drawing.Point(35, 246)
-        Me.lbl_fechanac_medico.Name = "lbl_fechanac_medico"
-        Me.lbl_fechanac_medico.Size = New System.Drawing.Size(122, 15)
-        Me.lbl_fechanac_medico.TabIndex = 14
-        Me.lbl_fechanac_medico.Text = "Fecha de Nacimiento:"
+        Me.CancelarToolStripMenuItem.Image = CType(resources.GetObject("CancelarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
+        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(100, 24)
+        Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
-        'txt_cedula_medico
+        'EliminarToolStripMenuItem
         '
-        Me.txt_cedula_medico.Location = New System.Drawing.Point(194, 127)
-        Me.txt_cedula_medico.Name = "txt_cedula_medico"
-        Me.txt_cedula_medico.Size = New System.Drawing.Size(121, 23)
-        Me.txt_cedula_medico.TabIndex = 15
+        Me.EliminarToolStripMenuItem.Image = CType(resources.GetObject("EliminarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
-        'txt_nombre_medico
+        'SalirToolStripMenuItem
         '
-        Me.txt_nombre_medico.Location = New System.Drawing.Point(194, 161)
-        Me.txt_nombre_medico.Name = "txt_nombre_medico"
-        Me.txt_nombre_medico.Size = New System.Drawing.Size(378, 23)
-        Me.txt_nombre_medico.TabIndex = 16
+        Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'txt_apellidos_medico
+        'TextBox1
         '
-        Me.txt_apellidos_medico.Location = New System.Drawing.Point(194, 197)
-        Me.txt_apellidos_medico.Name = "txt_apellidos_medico"
-        Me.txt_apellidos_medico.Size = New System.Drawing.Size(378, 23)
-        Me.txt_apellidos_medico.TabIndex = 17
-        '
-        'dtp_fechanacimiento_medico
-        '
-        Me.dtp_fechanacimiento_medico.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_fechanacimiento_medico.Location = New System.Drawing.Point(194, 237)
-        Me.dtp_fechanacimiento_medico.Name = "dtp_fechanacimiento_medico"
-        Me.dtp_fechanacimiento_medico.Size = New System.Drawing.Size(200, 23)
-        Me.dtp_fechanacimiento_medico.TabIndex = 18
-        '
-        'lbl_registro_medico
-        '
-        Me.lbl_registro_medico.AutoSize = True
-        Me.lbl_registro_medico.Location = New System.Drawing.Point(35, 62)
-        Me.lbl_registro_medico.Name = "lbl_registro_medico"
-        Me.lbl_registro_medico.Size = New System.Drawing.Size(113, 15)
-        Me.lbl_registro_medico.TabIndex = 20
-        Me.lbl_registro_medico.Text = "N° Registro Médico:"
-        '
-        'txt_registro_medico
-        '
-        Me.txt_registro_medico.Location = New System.Drawing.Point(194, 62)
-        Me.txt_registro_medico.Name = "txt_registro_medico"
-        Me.txt_registro_medico.Size = New System.Drawing.Size(121, 23)
-        Me.txt_registro_medico.TabIndex = 21
+        Me.TextBox1.Location = New System.Drawing.Point(180, 61)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(138, 27)
+        Me.TextBox1.TabIndex = 22
         '
         'frm_Medico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(624, 321)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frm_Medico"
-        Me.Text = "frm_Medico"
+        Me.Text = "Mantenimiento de Médicos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -246,10 +288,6 @@ Partial Class frm_Medico
     Friend WithEvents Label1 As Label
     Friend WithEvents rdb_inactivo_medico As RadioButton
     Friend WithEvents rdb_activo_medico As RadioButton
-    Friend WithEvents btn_Salir As Button
-    Friend WithEvents btn_Limpiar As Button
-    Friend WithEvents btn_Guardar As Button
-    Friend WithEvents cbx_id_medico As ComboBox
     Friend WithEvents lbl_cedula_medico As Label
     Friend WithEvents lbl_nombre_medico As Label
     Friend WithEvents lbl_apellido_medico As Label
@@ -260,4 +298,13 @@ Partial Class frm_Medico
     Friend WithEvents lbl_registro_medico As Label
     Friend WithEvents dtp_fechanacimiento_medico As DateTimePicker
     Friend WithEvents txt_apellidos_medico As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GrabarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
