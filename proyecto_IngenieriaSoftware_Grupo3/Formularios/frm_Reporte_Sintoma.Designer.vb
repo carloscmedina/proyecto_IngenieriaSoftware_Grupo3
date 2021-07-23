@@ -24,10 +24,15 @@ Partial Class frm_Reporte_Sintoma
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Reporte_Sintoma))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txt_id_Reporte = New System.Windows.Forms.TextBox()
-        Me.lbl_idReporte = New System.Windows.Forms.Label()
-        Me.txt_desc = New System.Windows.Forms.TextBox()
-        Me.lbl_desc = New System.Windows.Forms.Label()
+        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_Fecha = New System.Windows.Forms.Label()
+        Me.txtEmpleado2 = New System.Windows.Forms.TextBox()
+        Me.txt_Empleado = New System.Windows.Forms.TextBox()
+        Me.lbl_Empleado = New System.Windows.Forms.Label()
+        Me.txt_IdReporte = New System.Windows.Forms.TextBox()
+        Me.lbl_IdReporte = New System.Windows.Forms.Label()
+        Me.txt_descripcion = New System.Windows.Forms.TextBox()
+        Me.lbl_Descripcion = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GrabarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,71 +40,113 @@ Partial Class frm_Reporte_Sintoma
         Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lbl_Separador = New System.Windows.Forms.Label()
+        Me.lbl_Rol = New System.Windows.Forms.Label()
+        Me.lbl_Uuario = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txt_id_Reporte)
-        Me.GroupBox1.Controls.Add(Me.lbl_idReporte)
-        Me.GroupBox1.Controls.Add(Me.txt_desc)
-        Me.GroupBox1.Controls.Add(Me.lbl_desc)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 32)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Controls.Add(Me.dtp_Fecha)
+        Me.GroupBox1.Controls.Add(Me.lbl_Fecha)
+        Me.GroupBox1.Controls.Add(Me.txtEmpleado2)
+        Me.GroupBox1.Controls.Add(Me.txt_Empleado)
+        Me.GroupBox1.Controls.Add(Me.lbl_Empleado)
+        Me.GroupBox1.Controls.Add(Me.txt_IdReporte)
+        Me.GroupBox1.Controls.Add(Me.lbl_IdReporte)
+        Me.GroupBox1.Controls.Add(Me.txt_descripcion)
+        Me.GroupBox1.Controls.Add(Me.lbl_Descripcion)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 40)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(606, 181)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox1.Size = New System.Drawing.Size(758, 226)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'txt_id_Reporte
+        'dtp_Fecha
         '
-        Me.txt_id_Reporte.Location = New System.Drawing.Point(113, 24)
-        Me.txt_id_Reporte.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_id_Reporte.Name = "txt_id_Reporte"
-        Me.txt_id_Reporte.Size = New System.Drawing.Size(83, 27)
-        Me.txt_id_Reporte.TabIndex = 21
+        Me.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_Fecha.Location = New System.Drawing.Point(581, 24)
+        Me.dtp_Fecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Fecha.Name = "dtp_Fecha"
+        Me.dtp_Fecha.Size = New System.Drawing.Size(149, 31)
+        Me.dtp_Fecha.TabIndex = 26
         '
-        'lbl_idReporte
+        'lbl_Fecha
         '
-        Me.lbl_idReporte.AutoSize = True
-        Me.lbl_idReporte.Location = New System.Drawing.Point(18, 26)
-        Me.lbl_idReporte.Name = "lbl_idReporte"
-        Me.lbl_idReporte.Size = New System.Drawing.Size(81, 20)
-        Me.lbl_idReporte.TabIndex = 20
-        Me.lbl_idReporte.Text = "ID Reporte"
+        Me.lbl_Fecha.AutoSize = True
+        Me.lbl_Fecha.Location = New System.Drawing.Point(515, 28)
+        Me.lbl_Fecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Fecha.Name = "lbl_Fecha"
+        Me.lbl_Fecha.Size = New System.Drawing.Size(57, 25)
+        Me.lbl_Fecha.TabIndex = 25
+        Me.lbl_Fecha.Text = "Fecha"
         '
-        'txt_desc
+        'txtEmpleado2
         '
-        Me.txt_desc.Location = New System.Drawing.Point(113, 92)
-        Me.txt_desc.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_desc.Multiline = True
-        Me.txt_desc.Name = "txt_desc"
-        Me.txt_desc.Size = New System.Drawing.Size(472, 74)
-        Me.txt_desc.TabIndex = 15
+        Me.txtEmpleado2.Location = New System.Drawing.Point(252, 72)
+        Me.txtEmpleado2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmpleado2.Name = "txtEmpleado2"
+        Me.txtEmpleado2.Size = New System.Drawing.Size(478, 31)
+        Me.txtEmpleado2.TabIndex = 24
         '
-        'lbl_desc
+        'txt_Empleado
         '
-        Me.lbl_desc.AutoSize = True
-        Me.lbl_desc.Location = New System.Drawing.Point(18, 95)
-        Me.lbl_desc.Name = "lbl_desc"
-        Me.lbl_desc.Size = New System.Drawing.Size(87, 20)
-        Me.lbl_desc.TabIndex = 10
-        Me.lbl_desc.Text = "Descripción"
+        Me.txt_Empleado.Location = New System.Drawing.Point(141, 72)
+        Me.txt_Empleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Empleado.Name = "txt_Empleado"
+        Me.txt_Empleado.Size = New System.Drawing.Size(103, 31)
+        Me.txt_Empleado.TabIndex = 23
+        '
+        'lbl_Empleado
+        '
+        Me.lbl_Empleado.AutoSize = True
+        Me.lbl_Empleado.Location = New System.Drawing.Point(22, 72)
+        Me.lbl_Empleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Empleado.Name = "lbl_Empleado"
+        Me.lbl_Empleado.Size = New System.Drawing.Size(92, 25)
+        Me.lbl_Empleado.TabIndex = 22
+        Me.lbl_Empleado.Text = "Empleado"
+        '
+        'txt_IdReporte
+        '
+        Me.txt_IdReporte.Location = New System.Drawing.Point(141, 30)
+        Me.txt_IdReporte.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_IdReporte.Name = "txt_IdReporte"
+        Me.txt_IdReporte.Size = New System.Drawing.Size(103, 31)
+        Me.txt_IdReporte.TabIndex = 21
+        '
+        'lbl_IdReporte
+        '
+        Me.lbl_IdReporte.AutoSize = True
+        Me.lbl_IdReporte.Location = New System.Drawing.Point(22, 32)
+        Me.lbl_IdReporte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_IdReporte.Name = "lbl_IdReporte"
+        Me.lbl_IdReporte.Size = New System.Drawing.Size(97, 25)
+        Me.lbl_IdReporte.TabIndex = 20
+        Me.lbl_IdReporte.Text = "ID Reporte"
+        '
+        'txt_descripcion
+        '
+        Me.txt_descripcion.Location = New System.Drawing.Point(141, 115)
+        Me.txt_descripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_descripcion.Multiline = True
+        Me.txt_descripcion.Name = "txt_descripcion"
+        Me.txt_descripcion.Size = New System.Drawing.Size(589, 92)
+        Me.txt_descripcion.TabIndex = 15
+        '
+        'lbl_Descripcion
+        '
+        Me.lbl_Descripcion.AutoSize = True
+        Me.lbl_Descripcion.Location = New System.Drawing.Point(22, 119)
+        Me.lbl_Descripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Descripcion.Name = "lbl_Descripcion"
+        Me.lbl_Descripcion.Size = New System.Drawing.Size(104, 25)
+        Me.lbl_Descripcion.TabIndex = 10
+        Me.lbl_Descripcion.Text = "Descripción"
         '
         'MenuStrip1
         '
@@ -107,7 +154,8 @@ Partial Class frm_Reporte_Sintoma
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.GrabarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.CancelarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(628, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(785, 33)
         Me.MenuStrip1.TabIndex = 12
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -115,123 +163,86 @@ Partial Class frm_Reporte_Sintoma
         '
         Me.ConsultarToolStripMenuItem.Image = CType(resources.GetObject("ConsultarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(123, 29)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'GrabarToolStripMenuItem
         '
         Me.GrabarToolStripMenuItem.Image = CType(resources.GetObject("GrabarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GrabarToolStripMenuItem.Name = "GrabarToolStripMenuItem"
-        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
+        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(101, 29)
         Me.GrabarToolStripMenuItem.Text = "Grabar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Image = CType(resources.GetObject("ModificarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(123, 29)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'CancelarToolStripMenuItem
         '
         Me.CancelarToolStripMenuItem.Image = CType(resources.GetObject("CancelarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(100, 24)
+        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(114, 29)
         Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Image = CType(resources.GetObject("EliminarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(110, 29)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(81, 29)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'TextBox6
+        'lbl_Separador
         '
-        Me.TextBox6.Location = New System.Drawing.Point(202, 58)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(383, 27)
-        Me.TextBox6.TabIndex = 24
+        Me.lbl_Separador.AutoSize = True
+        Me.lbl_Separador.Location = New System.Drawing.Point(88, 271)
+        Me.lbl_Separador.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Separador.Name = "lbl_Separador"
+        Me.lbl_Separador.Size = New System.Drawing.Size(16, 25)
+        Me.lbl_Separador.TabIndex = 19
+        Me.lbl_Separador.Text = "|"
         '
-        'TextBox3
+        'lbl_Rol
         '
-        Me.TextBox3.Location = New System.Drawing.Point(113, 58)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(83, 27)
-        Me.TextBox3.TabIndex = 23
+        Me.lbl_Rol.AutoSize = True
+        Me.lbl_Rol.Location = New System.Drawing.Point(111, 271)
+        Me.lbl_Rol.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Rol.Name = "lbl_Rol"
+        Me.lbl_Rol.Size = New System.Drawing.Size(33, 25)
+        Me.lbl_Rol.TabIndex = 18
+        Me.lbl_Rol.Text = "rol"
         '
-        'Label2
+        'lbl_Uuario
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 58)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 20)
-        Me.Label2.TabIndex = 22
-        Me.Label2.Text = "Empleado"
+        Me.lbl_Uuario.AutoSize = True
+        Me.lbl_Uuario.Location = New System.Drawing.Point(15, 271)
+        Me.lbl_Uuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Uuario.Name = "lbl_Uuario"
+        Me.lbl_Uuario.Size = New System.Drawing.Size(70, 25)
+        Me.lbl_Uuario.TabIndex = 17
+        Me.lbl_Uuario.Text = "usuario"
         '
-        'DateTimePicker1
+        'frm_Reporte_Sintoma
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(465, 19)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(120, 27)
-        Me.DateTimePicker1.TabIndex = 26
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(412, 22)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 20)
-        Me.Label8.TabIndex = 25
-        Me.Label8.Text = "Fecha"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(70, 217)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(13, 20)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "|"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(89, 217)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(27, 20)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "rol"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 217)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 20)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "usuario"
-        '
-        'Reporte_Sintoma
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(628, 251)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.ClientSize = New System.Drawing.Size(785, 314)
+        Me.Controls.Add(Me.lbl_Separador)
+        Me.Controls.Add(Me.lbl_Rol)
+        Me.Controls.Add(Me.lbl_Uuario)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "Reporte_Sintoma"
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Name = "frm_Reporte_Sintoma"
         Me.Text = "Reporte de síntoma"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -243,10 +254,10 @@ Partial Class frm_Reporte_Sintoma
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txt_id_Reporte As TextBox
-    Friend WithEvents lbl_idReporte As Label
-    Friend WithEvents txt_desc As TextBox
-    Friend WithEvents lbl_desc As Label
+    Friend WithEvents txt_IdReporte As TextBox
+    Friend WithEvents lbl_IdReporte As Label
+    Friend WithEvents txt_descripcion As TextBox
+    Friend WithEvents lbl_Descripcion As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GrabarToolStripMenuItem As ToolStripMenuItem
@@ -254,12 +265,12 @@ Partial Class frm_Reporte_Sintoma
     Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents txtEmpleado2 As TextBox
+    Friend WithEvents txt_Empleado As TextBox
+    Friend WithEvents lbl_Empleado As Label
+    Friend WithEvents dtp_Fecha As DateTimePicker
+    Friend WithEvents lbl_Fecha As Label
+    Friend WithEvents lbl_Separador As Label
+    Friend WithEvents lbl_Rol As Label
+    Friend WithEvents lbl_Uuario As Label
 End Class
