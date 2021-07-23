@@ -24,7 +24,7 @@ Partial Class frm_Empleado
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Empleado))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cmbArea = New System.Windows.Forms.ComboBox()
+        Me.cmb_Area = New System.Windows.Forms.ComboBox()
         Me.txt_IdEmpleado = New System.Windows.Forms.TextBox()
         Me.lbl_Area = New System.Windows.Forms.Label()
         Me.dtp_FechaNacimiento = New System.Windows.Forms.DateTimePicker()
@@ -55,7 +55,7 @@ Partial Class frm_Empleado
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.cmbArea)
+        Me.GroupBox1.Controls.Add(Me.cmb_Area)
         Me.GroupBox1.Controls.Add(Me.txt_IdEmpleado)
         Me.GroupBox1.Controls.Add(Me.lbl_Area)
         Me.GroupBox1.Controls.Add(Me.dtp_FechaNacimiento)
@@ -76,14 +76,14 @@ Partial Class frm_Empleado
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'cmbArea
+        'cmb_Area
         '
-        Me.cmbArea.FormattingEnabled = True
-        Me.cmbArea.Location = New System.Drawing.Point(158, 165)
-        Me.cmbArea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cmbArea.Name = "cmbArea"
-        Me.cmbArea.Size = New System.Drawing.Size(358, 23)
-        Me.cmbArea.TabIndex = 23
+        Me.cmb_Area.FormattingEnabled = True
+        Me.cmb_Area.Location = New System.Drawing.Point(158, 165)
+        Me.cmb_Area.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_Area.Name = "cmb_Area"
+        Me.cmb_Area.Size = New System.Drawing.Size(358, 23)
+        Me.cmb_Area.TabIndex = 23
         '
         'txt_IdEmpleado
         '
@@ -329,7 +329,7 @@ Partial Class frm_Empleado
     Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents cmbArea As ComboBox
+    Friend WithEvents cmb_Area As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents lbl_Rol As Label
     Friend WithEvents lbl_Usuario As Label

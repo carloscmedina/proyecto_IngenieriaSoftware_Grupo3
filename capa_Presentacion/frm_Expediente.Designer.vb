@@ -31,27 +31,27 @@ Partial Class frm_Expediente
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_Fecha = New System.Windows.Forms.Label()
+        Me.txt_Nombre = New System.Windows.Forms.TextBox()
+        Me.txt_Empleado = New System.Windows.Forms.TextBox()
+        Me.txt_Numero = New System.Windows.Forms.TextBox()
+        Me.lbl_Empleado = New System.Windows.Forms.Label()
+        Me.lbl_Numero = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.dgv_Datos = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lbl_Rol = New System.Windows.Forms.Label()
+        Me.lbl_Usuario = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_Datos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -60,7 +60,8 @@ Partial Class frm_Expediente
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.GrabarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.CancelarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(754, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(660, 28)
         Me.MenuStrip1.TabIndex = 12
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -68,162 +69,144 @@ Partial Class frm_Expediente
         '
         Me.ConsultarToolStripMenuItem.Image = CType(resources.GetObject("ConsultarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(90, 24)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'GrabarToolStripMenuItem
         '
         Me.GrabarToolStripMenuItem.Image = CType(resources.GetObject("GrabarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GrabarToolStripMenuItem.Name = "GrabarToolStripMenuItem"
-        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
+        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
         Me.GrabarToolStripMenuItem.Text = "Grabar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Image = CType(resources.GetObject("ModificarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(90, 24)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'CancelarToolStripMenuItem
         '
         Me.CancelarToolStripMenuItem.Image = CType(resources.GetObject("CancelarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(100, 24)
+        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Image = CType(resources.GetObject("EliminarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(61, 24)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 31)
+        Me.GroupBox1.Controls.Add(Me.dtp_Fecha)
+        Me.GroupBox1.Controls.Add(Me.lbl_Fecha)
+        Me.GroupBox1.Controls.Add(Me.txt_Nombre)
+        Me.GroupBox1.Controls.Add(Me.txt_Empleado)
+        Me.GroupBox1.Controls.Add(Me.txt_Numero)
+        Me.GroupBox1.Controls.Add(Me.lbl_Empleado)
+        Me.GroupBox1.Controls.Add(Me.lbl_Numero)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 23)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(632, 95)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(553, 71)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
-        'DateTimePicker1
+        'dtp_Fecha
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(399, 16)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(120, 27)
-        Me.DateTimePicker1.TabIndex = 13
+        Me.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_Fecha.Location = New System.Drawing.Point(349, 12)
+        Me.dtp_Fecha.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtp_Fecha.Name = "dtp_Fecha"
+        Me.dtp_Fecha.Size = New System.Drawing.Size(106, 23)
+        Me.dtp_Fecha.TabIndex = 13
         '
-        'Label8
+        'lbl_Fecha
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(346, 19)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 20)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Fecha"
+        Me.lbl_Fecha.AutoSize = True
+        Me.lbl_Fecha.Location = New System.Drawing.Point(303, 14)
+        Me.lbl_Fecha.Name = "lbl_Fecha"
+        Me.lbl_Fecha.Size = New System.Drawing.Size(38, 15)
+        Me.lbl_Fecha.TabIndex = 12
+        Me.lbl_Fecha.Text = "Fecha"
         '
-        'TextBox6
+        'txt_Nombre
         '
-        Me.TextBox6.Location = New System.Drawing.Point(199, 51)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(320, 27)
-        Me.TextBox6.TabIndex = 10
+        Me.txt_Nombre.Location = New System.Drawing.Point(174, 38)
+        Me.txt_Nombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_Nombre.Name = "txt_Nombre"
+        Me.txt_Nombre.Size = New System.Drawing.Size(280, 23)
+        Me.txt_Nombre.TabIndex = 10
         '
-        'TextBox3
+        'txt_Empleado
         '
-        Me.TextBox3.Location = New System.Drawing.Point(110, 51)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(83, 27)
-        Me.TextBox3.TabIndex = 7
+        Me.txt_Empleado.Location = New System.Drawing.Point(96, 38)
+        Me.txt_Empleado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_Empleado.Name = "txt_Empleado"
+        Me.txt_Empleado.Size = New System.Drawing.Size(73, 23)
+        Me.txt_Empleado.TabIndex = 7
         '
-        'TextBox2
+        'txt_Numero
         '
-        Me.TextBox2.Location = New System.Drawing.Point(110, 16)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(83, 27)
-        Me.TextBox2.TabIndex = 5
+        Me.txt_Numero.Location = New System.Drawing.Point(96, 12)
+        Me.txt_Numero.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_Numero.Name = "txt_Numero"
+        Me.txt_Numero.Size = New System.Drawing.Size(73, 23)
+        Me.txt_Numero.TabIndex = 5
         '
-        'Label2
+        'lbl_Empleado
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Empleado"
+        Me.lbl_Empleado.AutoSize = True
+        Me.lbl_Empleado.Location = New System.Drawing.Point(13, 38)
+        Me.lbl_Empleado.Name = "lbl_Empleado"
+        Me.lbl_Empleado.Size = New System.Drawing.Size(60, 15)
+        Me.lbl_Empleado.TabIndex = 1
+        Me.lbl_Empleado.Text = "Empleado"
         '
-        'Label1
+        'lbl_Numero
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Número"
+        Me.lbl_Numero.AutoSize = True
+        Me.lbl_Numero.Location = New System.Drawing.Point(13, 14)
+        Me.lbl_Numero.Name = "lbl_Numero"
+        Me.lbl_Numero.Size = New System.Drawing.Size(51, 15)
+        Me.lbl_Numero.TabIndex = 0
+        Me.lbl_Numero.Text = "Número"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 129)
+        Me.GroupBox2.Controls.Add(Me.dgv_Datos)
+        Me.GroupBox2.Location = New System.Drawing.Point(10, 97)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(711, 247)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(622, 185)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         '
-        'DataGridView1
+        'dgv_Datos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column2, Me.Column3, Me.Column5})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 23)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 221)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(73, 379)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(13, 20)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "|"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(92, 379)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(27, 20)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "rol"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(15, 379)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 20)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "usuario"
+        Me.dgv_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_Datos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column2, Me.Column3, Me.Column5})
+        Me.dgv_Datos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv_Datos.Location = New System.Drawing.Point(3, 18)
+        Me.dgv_Datos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgv_Datos.Name = "dgv_Datos"
+        Me.dgv_Datos.RowHeadersWidth = 51
+        Me.dgv_Datos.RowTemplate.Height = 29
+        Me.dgv_Datos.Size = New System.Drawing.Size(616, 165)
+        Me.dgv_Datos.TabIndex = 0
         '
         'Column1
         '
@@ -262,17 +245,45 @@ Partial Class frm_Expediente
         Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.Column5.Width = 60
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(64, 284)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(10, 15)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "|"
+        '
+        'lbl_Rol
+        '
+        Me.lbl_Rol.AutoSize = True
+        Me.lbl_Rol.Location = New System.Drawing.Point(80, 284)
+        Me.lbl_Rol.Name = "lbl_Rol"
+        Me.lbl_Rol.Size = New System.Drawing.Size(21, 15)
+        Me.lbl_Rol.TabIndex = 18
+        Me.lbl_Rol.Text = "rol"
+        '
+        'lbl_Usuario
+        '
+        Me.lbl_Usuario.AutoSize = True
+        Me.lbl_Usuario.Location = New System.Drawing.Point(13, 284)
+        Me.lbl_Usuario.Name = "lbl_Usuario"
+        Me.lbl_Usuario.Size = New System.Drawing.Size(46, 15)
+        Me.lbl_Usuario.TabIndex = 17
+        Me.lbl_Usuario.Text = "usuario"
+        '
         'frm_Expediente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(754, 411)
+        Me.ClientSize = New System.Drawing.Size(660, 308)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lbl_Rol)
+        Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frm_Expediente"
         Me.Text = "Expediente"
         Me.MenuStrip1.ResumeLayout(False)
@@ -280,7 +291,7 @@ Partial Class frm_Expediente
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_Datos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -294,18 +305,18 @@ Partial Class frm_Expediente
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents dtp_Fecha As DateTimePicker
+    Friend WithEvents lbl_Fecha As Label
+    Friend WithEvents txt_Nombre As TextBox
+    Friend WithEvents txt_Empleado As TextBox
+    Friend WithEvents txt_Numero As TextBox
+    Friend WithEvents lbl_Empleado As Label
+    Friend WithEvents lbl_Numero As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_Datos As DataGridView
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lbl_Rol As Label
+    Friend WithEvents lbl_Usuario As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
