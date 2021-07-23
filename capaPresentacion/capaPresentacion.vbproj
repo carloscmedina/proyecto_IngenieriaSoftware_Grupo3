@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>capaPresentacion</RootNamespace>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>capaPresentacion</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="frm_MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

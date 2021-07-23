@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>capaNegocio</RootNamespace>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>capaNegocio</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>
