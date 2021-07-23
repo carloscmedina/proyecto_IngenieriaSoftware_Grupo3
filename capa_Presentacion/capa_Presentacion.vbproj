@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\capaNegocio\capa_Negocio.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="frm_Cita.vb">
       <SubType>Form</SubType>
     </Compile>

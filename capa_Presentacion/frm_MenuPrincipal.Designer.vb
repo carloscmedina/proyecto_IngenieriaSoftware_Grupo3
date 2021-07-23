@@ -78,13 +78,13 @@ Partial Class frm_MenuPrincipal
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'MédicosToolStripMenuItem
         '
         Me.MédicosToolStripMenuItem.Name = "MédicosToolStripMenuItem"
-        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.MédicosToolStripMenuItem.Text = "Médicos"
         '
         'ProcesosToolStripMenuItem
@@ -97,13 +97,13 @@ Partial Class frm_MenuPrincipal
         'CitaMédicaToolStripMenuItem
         '
         Me.CitaMédicaToolStripMenuItem.Name = "CitaMédicaToolStripMenuItem"
-        Me.CitaMédicaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CitaMédicaToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
         Me.CitaMédicaToolStripMenuItem.Text = "Cita médica"
         '
         'ExpedienteToolStripMenuItem
         '
         Me.ExpedienteToolStripMenuItem.Name = "ExpedienteToolStripMenuItem"
-        Me.ExpedienteToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExpedienteToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
         Me.ExpedienteToolStripMenuItem.Text = "Expediente"
         '
         'ConsultasToolStripMenuItem
@@ -116,13 +116,13 @@ Partial Class frm_MenuPrincipal
         'ExpedienteToolStripMenuItem1
         '
         Me.ExpedienteToolStripMenuItem1.Name = "ExpedienteToolStripMenuItem1"
-        Me.ExpedienteToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ExpedienteToolStripMenuItem1.Size = New System.Drawing.Size(199, 26)
         Me.ExpedienteToolStripMenuItem1.Text = "Expediente"
         '
         'ReporteGeneralToolStripMenuItem
         '
         Me.ReporteGeneralToolStripMenuItem.Name = "ReporteGeneralToolStripMenuItem"
-        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(199, 26)
         Me.ReporteGeneralToolStripMenuItem.Text = "Reporte general"
         '
         'frm_MenuPrincipal
@@ -133,7 +133,9 @@ Partial Class frm_MenuPrincipal
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frm_MenuPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menú principal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
