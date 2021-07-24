@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 
-Public Class cd_Persona
+Public Class cd_Empleado
 
     Dim objConexion As New cd_Conexion
     Dim da As New SqlDataAdapter
@@ -27,39 +27,33 @@ Public Class cd_Persona
     Function generarId() As Integer
         Try
             cn = objConexion.Conectar
-            cn.Open()
             da = New SqlDataAdapter("sp_ObtenerUltimoIdPersonas", cn)
             Dim r As Integer
             r = da.SelectCommand.ExecuteScalar
             Return r
         Catch ex As Exception
-            Throw
+            Throw ex
         Finally
             cn.Dispose()
         End Try
 
     End Function
 
-    Sub registroPersonas(ByVal obj As capaEntidad.Persona)
+    Sub registroEmpleados(ByVal obj As capaEntidad.Empleado)
         Try
             cn = objConexion.Conectar
             cn.Open()
-            da = New SqlDataAdapter("sp_IngresarNuevaPersona", cn)
+            da = New SqlDataAdapter("sp_IngresarNuevoEmpleado", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("@id", SqlDbType.Int).Value = obj.idPersona
-                .Add("@tipoIdentificacion", SqlDbType.Char).Value = obj.tipoIdentificacion
-                .Add("@identificacion", SqlDbType.VarChar).Value = obj.identificacion
-                .Add("@apellidos", SqlDbType.VarChar).Value = obj.apellidos
-                .Add("@nombres", SqlDbType.VarChar).Value = obj.nombres
-                .Add("@fechaNacimiento", SqlDbType.Date).Value = obj.fechaNacimiento
-                .Add("@estado", SqlDbType.Bit).Value = obj.estado
+                .Add("@idPersona", SqlDbType.Int).Value = obj.idPersona
+                .Add("@area", SqlDbType.VarChar).Value = obj.area
             End With
             da.SelectCommand.ExecuteNonQuery()
 
             MsgBox("Registro realizado con éxito", MsgBoxStyle.Information)
         Catch ex As Exception
-            Throw
+            Throw ex
         Finally
             cn.Dispose()
             da.Dispose()

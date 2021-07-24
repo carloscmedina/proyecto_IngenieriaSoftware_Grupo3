@@ -27,6 +27,7 @@ Partial Class frm_MenuPrincipal
         Me.ModificarContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarProgramaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MédicosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -70,21 +71,27 @@ Partial Class frm_MenuPrincipal
         '
         'MantenimientosToolStripMenuItem
         '
-        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.MédicosToolStripMenuItem})
+        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.MédicosToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'MédicosToolStripMenuItem
         '
         Me.MédicosToolStripMenuItem.Name = "MédicosToolStripMenuItem"
-        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
+        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.MédicosToolStripMenuItem.Text = "Médicos"
         '
         'ProcesosToolStripMenuItem
@@ -131,6 +138,7 @@ Partial Class frm_MenuPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 451)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frm_MenuPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -156,4 +164,5 @@ Partial Class frm_MenuPrincipal
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExpedienteToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ReporteGeneralToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
 End Class

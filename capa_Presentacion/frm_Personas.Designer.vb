@@ -22,32 +22,36 @@ Partial Class frm_Personas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgv_Personas = New System.Windows.Forms.DataGridView()
+        CType(Me.dgv_Personas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgv_Personas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(28, 21)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(427, 188)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgv_Personas.AllowUserToAddRows = False
+        Me.dgv_Personas.AllowUserToDeleteRows = False
+        Me.dgv_Personas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_Personas.Location = New System.Drawing.Point(12, 12)
+        Me.dgv_Personas.Name = "dgv_Personas"
+        Me.dgv_Personas.RowHeadersWidth = 51
+        Me.dgv_Personas.RowTemplate.Height = 29
+        Me.dgv_Personas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv_Personas.Size = New System.Drawing.Size(458, 232)
+        Me.dgv_Personas.TabIndex = 0
         '
         'frm_Personas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(494, 270)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(482, 265)
+        Me.Controls.Add(Me.dgv_Personas)
         Me.Name = "frm_Personas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_Personas"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_Personas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_Personas As DataGridView
 End Class
