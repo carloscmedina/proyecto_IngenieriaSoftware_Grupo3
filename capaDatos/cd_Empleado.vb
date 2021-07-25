@@ -32,7 +32,7 @@ Public Class cd_Empleado
             r = da.SelectCommand.ExecuteScalar
             Return r
         Catch ex As Exception
-            Throw ex
+            Throw
         Finally
             cn.Dispose()
         End Try
@@ -53,7 +53,7 @@ Public Class cd_Empleado
 
             MsgBox("Registro realizado con éxito", MsgBoxStyle.Information)
         Catch ex As Exception
-            Throw ex
+            Throw
         Finally
             cn.Dispose()
             da.Dispose()

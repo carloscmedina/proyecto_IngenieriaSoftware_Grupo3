@@ -22,7 +22,7 @@ Public Class cd_Medico
 
             MsgBox("Registro realizado con éxito", MsgBoxStyle.Information)
         Catch ex As Exception
-            Throw ex
+            Throw
         Finally
             cn.Dispose()
             da.Dispose()

@@ -14,7 +14,7 @@ Public Class frm_Personas
 
     Private Sub dgv_Personas_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_Personas.CellContentDoubleClick
         Dim frm As frm_Usuario = CType(Owner, frm_Usuario)
-        frm.txt_Empleado.Text = dgv_Personas.CurrentRow.Cells(0).Value.ToString()
+        frm.txt_IdEmpleado.Text = dgv_Personas.CurrentRow.Cells(0).Value.ToString()
         frm.txt_NombreEmpleado.Text = dgv_Personas.CurrentRow.Cells(2).Value.ToString()
         Me.Close()
     End Sub

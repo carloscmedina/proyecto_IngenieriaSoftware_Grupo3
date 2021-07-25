@@ -27,9 +27,9 @@ Partial Class frm_MenuPrincipal
         Me.ModificarContraseñaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarProgramaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MédicosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CitaMédicaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpedienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -76,23 +76,23 @@ Partial Class frm_MenuPrincipal
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
-        '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'MédicosToolStripMenuItem
         '
         Me.MédicosToolStripMenuItem.Name = "MédicosToolStripMenuItem"
-        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.MédicosToolStripMenuItem.Text = "Médicos"
+        '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ProcesosToolStripMenuItem
         '
