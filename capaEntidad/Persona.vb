@@ -7,17 +7,6 @@
     Public _fechaNacimiento As Date
     Private _estado As Boolean
 
-    'Constructor, donde debemos pasar todos los datos  
-    'Public Sub New(idPersona As Integer, tipoIdentificacion As Char, identificacion As String, apellidos As String, nombres As String, edad As Integer, fechaNacimiento As Date)
-    '    Me.idPersona = idPersona
-    '    Me.tipoIdentificacion = tipoIdentificacion
-    '    Me.identificacion = identificacion
-    '    Me.apellidos = apellidos
-    '    Me.nombres = nombres
-    '    Me.edad = edad
-    '    Me.fechaNacimiento = fechaNacimiento
-    'End Sub
-
     Public Property idPersona As Integer
         Get
             Return _idPersona
@@ -81,7 +70,4 @@
         End Set
     End Property
 
-    Public Sub consultaDatos()
-
-    End Sub
 End Class

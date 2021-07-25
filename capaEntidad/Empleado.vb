@@ -26,11 +26,4 @@
         End Set
     End Property
 
-    Public Sub New()
-
-    End Sub
-
-    Public Sub consultaDatos()
-
-    End Sub
 End Class

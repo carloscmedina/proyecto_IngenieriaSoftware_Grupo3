@@ -20,4 +20,17 @@ Public Class cn_Persona
         objCapaDatos.registroPersonas(obj)
     End Sub
 
+    'Implementamos la función que retorna la lista
+    Public Function buscaPersonas(ByVal id As Integer) As List(Of capaEntidad.Persona)
+        Dim lista As New List(Of capaEntidad.Persona)
+        Dim obj As New cd_Persona
+        lista = obj.buscarPersonas(id)
+        Return lista
+    End Function
+
+    Public Sub modificaPersonas(ByVal registros As capaEntidad.Persona)
+        Dim Datos As New cd_Persona
+        Datos.modificarPersonas(registros)
+    End Sub
+
 End Class

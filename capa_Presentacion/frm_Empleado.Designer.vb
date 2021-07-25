@@ -45,12 +45,12 @@ Partial Class frm_Empleado
         Me.lbl_Rol = New System.Windows.Forms.Label()
         Me.lbl_Usuario = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GrabarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Nuevo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Consultar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Grabar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Modificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Cancelar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Salir = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -84,6 +84,7 @@ Partial Class frm_Empleado
         '
         'cmbTipoIdentificacion
         '
+        Me.cmbTipoIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTipoIdentificacion.FormattingEnabled = True
         Me.cmbTipoIdentificacion.Items.AddRange(New Object() {"C Cédula", "P Pasaporte"})
         Me.cmbTipoIdentificacion.Location = New System.Drawing.Point(181, 61)
@@ -102,6 +103,7 @@ Partial Class frm_Empleado
         '
         'cmb_Area
         '
+        Me.cmb_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_Area.FormattingEnabled = True
         Me.cmb_Area.Items.AddRange(New Object() {"SIST Sistemas", "RRHH Recursos Humanos", "CONT Contabilidad"})
         Me.cmb_Area.Location = New System.Drawing.Point(181, 235)
@@ -267,7 +269,7 @@ Partial Class frm_Empleado
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.GrabarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.CancelarToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsm_Nuevo, Me.tsm_Consultar, Me.tsm_Grabar, Me.tsm_Modificar, Me.tsm_Cancelar, Me.tsm_Salir})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
@@ -275,47 +277,47 @@ Partial Class frm_Empleado
         Me.MenuStrip1.TabIndex = 17
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'NuevoToolStripMenuItem
+        'tsm_Nuevo
         '
-        Me.NuevoToolStripMenuItem.Image = CType(resources.GetObject("NuevoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo"
+        Me.tsm_Nuevo.Image = CType(resources.GetObject("tsm_Nuevo.Image"), System.Drawing.Image)
+        Me.tsm_Nuevo.Name = "tsm_Nuevo"
+        Me.tsm_Nuevo.Size = New System.Drawing.Size(86, 24)
+        Me.tsm_Nuevo.Text = "Nuevo"
         '
-        'ConsultarToolStripMenuItem
+        'tsm_Consultar
         '
-        Me.ConsultarToolStripMenuItem.Image = CType(resources.GetObject("ConsultarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        Me.tsm_Consultar.Image = CType(resources.GetObject("tsm_Consultar.Image"), System.Drawing.Image)
+        Me.tsm_Consultar.Name = "tsm_Consultar"
+        Me.tsm_Consultar.Size = New System.Drawing.Size(105, 24)
+        Me.tsm_Consultar.Text = "Consultar"
         '
-        'GrabarToolStripMenuItem
+        'tsm_Grabar
         '
-        Me.GrabarToolStripMenuItem.Image = CType(resources.GetObject("GrabarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.GrabarToolStripMenuItem.Name = "GrabarToolStripMenuItem"
-        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.GrabarToolStripMenuItem.Text = "Grabar"
+        Me.tsm_Grabar.Image = CType(resources.GetObject("tsm_Grabar.Image"), System.Drawing.Image)
+        Me.tsm_Grabar.Name = "tsm_Grabar"
+        Me.tsm_Grabar.Size = New System.Drawing.Size(88, 24)
+        Me.tsm_Grabar.Text = "Grabar"
         '
-        'ModificarToolStripMenuItem
+        'tsm_Modificar
         '
-        Me.ModificarToolStripMenuItem.Image = CType(resources.GetObject("ModificarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
+        Me.tsm_Modificar.Image = CType(resources.GetObject("tsm_Modificar.Image"), System.Drawing.Image)
+        Me.tsm_Modificar.Name = "tsm_Modificar"
+        Me.tsm_Modificar.Size = New System.Drawing.Size(107, 24)
+        Me.tsm_Modificar.Text = "Modificar"
         '
-        'CancelarToolStripMenuItem
+        'tsm_Cancelar
         '
-        Me.CancelarToolStripMenuItem.Image = CType(resources.GetObject("CancelarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(100, 24)
-        Me.CancelarToolStripMenuItem.Text = "Cancelar"
+        Me.tsm_Cancelar.Image = CType(resources.GetObject("tsm_Cancelar.Image"), System.Drawing.Image)
+        Me.tsm_Cancelar.Name = "tsm_Cancelar"
+        Me.tsm_Cancelar.Size = New System.Drawing.Size(100, 24)
+        Me.tsm_Cancelar.Text = "Cancelar"
         '
-        'SalirToolStripMenuItem
+        'tsm_Salir
         '
-        Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
-        Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.tsm_Salir.Image = CType(resources.GetObject("tsm_Salir.Image"), System.Drawing.Image)
+        Me.tsm_Salir.Name = "tsm_Salir"
+        Me.tsm_Salir.Size = New System.Drawing.Size(72, 24)
+        Me.tsm_Salir.Text = "Salir"
         '
         'frm_Empleado
         '
@@ -360,12 +362,12 @@ Partial Class frm_Empleado
     Friend WithEvents lbl_Rol As Label
     Friend WithEvents lbl_Usuario As Label
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents NuevoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GrabarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsm_Nuevo As ToolStripMenuItem
+    Friend WithEvents tsm_Consultar As ToolStripMenuItem
+    Friend WithEvents tsm_Grabar As ToolStripMenuItem
+    Friend WithEvents tsm_Modificar As ToolStripMenuItem
+    Friend WithEvents tsm_Cancelar As ToolStripMenuItem
+    Friend WithEvents tsm_Salir As ToolStripMenuItem
     Friend WithEvents cmbTipoIdentificacion As ComboBox
     Friend WithEvents Label1 As Label
 End Class

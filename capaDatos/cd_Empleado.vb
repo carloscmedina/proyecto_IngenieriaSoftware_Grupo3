@@ -61,4 +61,43 @@ Public Class cd_Empleado
         End Try
     End Sub
 
+    Public Function buscarEmpleados(ByVal idPersona As Integer) As List(Of capaEntidad.Empleado)
+        Dim lista As New List(Of capaEntidad.Empleado)
+        cn = objConexion.Conectar
+        cn.Open()
+        Try
+            Dim cmd As New SqlCommand("sp_consultarEmpleado", cn)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@idPersona", idPersona)
+            Dim dr As SqlDataReader
+            dr = cmd.ExecuteReader
+            While dr.Read
+                Dim reg As New capaEntidad.Empleado
+                reg.area = dr.GetValue(1).ToString()
+                lista.Add(reg)
+            End While
+            dr.Close()
+        Catch ex As Exception
+        End Try
+
+        Return lista
+    End Function
+
+    'para modificar Empleados'
+    Public Sub modificarEmpleados(ByVal registros As capaEntidad.Empleado)
+        cn = objConexion.Conectar
+        cn.Open()
+
+        Dim cmd As New SqlCommand("sp_ModificarEmpleado", cn)
+        cmd.CommandType = CommandType.StoredProcedure
+
+        With cmd.Parameters
+            .Add("@idPersona", SqlDbType.Int).Value = registros.idPersona
+            .Add("@area", SqlDbType.VarChar).Value = registros.area
+        End With
+        cmd.ExecuteNonQuery()
+        MsgBox("Registro modificado con éxito", MsgBoxStyle.Information)
+        cn.Close()
+    End Sub
+
 End Class

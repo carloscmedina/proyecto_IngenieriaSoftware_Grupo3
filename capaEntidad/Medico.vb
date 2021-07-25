@@ -7,16 +7,4 @@
         Me.idMedico = idMedico
         Me.estado = estado
     End Sub
-
-    Public Sub New()
-
-    End Sub
-
-    Public Sub obtenerReporte()
-
-    End Sub
-
-    Public Sub consultaDatos()
-
-    End Sub
 End Class

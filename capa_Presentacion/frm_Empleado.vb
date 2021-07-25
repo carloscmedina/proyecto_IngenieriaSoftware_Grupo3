@@ -10,6 +10,8 @@ Public Class frm_Empleado
     Dim objPersona As New Persona
     Dim objEmpleado As New Empleado
 
+    Public variableNuevo As String
+
     'Funciones para obtener valores de los campos
     Function getId() As Integer
         Return CInt(txt_IdEmpleado.Text.Trim)
@@ -58,6 +60,7 @@ Public Class frm_Empleado
         objPersona.identificacion = getIdentificacion()
         objPersona.apellidos = getApellidos()
         objPersona.nombres = getNombres()
+        objPersona.fechaNacimiento = getFechaNacimiento()
         objPersona.estado = getEstado()
         objNegocio.registroPersonas(objPersona)
     End Sub
@@ -68,12 +71,188 @@ Public Class frm_Empleado
         objNegocio2.registroEmpleados(objEmpleado)
     End Sub
 
-    Private Sub GrabarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GrabarToolStripMenuItem.Click
-        registroPersonas()
-        registroEmpleados()
+    Sub modificaPersonas()
+        objPersona.idPersona = getId()
+        objPersona.tipoIdentificacion = getTipoIdentificacion()
+        objPersona.identificacion = getIdentificacion()
+        objPersona.apellidos = getApellidos()
+        objPersona.nombres = getNombres()
+        objPersona.estado = getEstado()
+        objNegocio.modificaPersonas(objPersona)
     End Sub
 
-    Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
-        GenerarId()
+
+    'Sub modificarPersonas()
+    '    Dim Entidad As New Persona
+    '    Dim Negocio As New cn_Persona
+
+    '    With Entidad
+    '        .tipoIdentificacion = getTipoIdentificacion()
+    '        .identificacion = getIdentificacion()
+    '        .apellidos = getApellidos()
+    '        .nombres = getNombres()
+    '        .fechaNacimiento = getFechaNacimiento()
+    '        .estado = getEstado()
+    '    End With '
+    '    Negocio.modificaPersonas(Entidad)
+    'End Sub
+
+
+    Sub modificaEmpleados()
+        Dim Entidad As New Empleado
+        Dim Negocio2 As New cn_Empleado
+
+        With Entidad
+            .idPersona = getId()
+            .area = getArea()
+        End With '
+        Negocio2.modificaEmpleados(Entidad)
     End Sub
+
+
+
+
+    Sub consultarPersonas()
+        Dim lista As New List(Of capaEntidad.Persona)
+        Dim obj As New cn_Persona
+        lista = obj.buscaPersonas(CInt(Me.txt_IdEmpleado.Text))
+        If lista.Item(0).tipoIdentificacion = "C" Then
+            cmbTipoIdentificacion.SelectedIndex = 0
+        ElseIf lista.Item(0).tipoIdentificacion = "P" Then
+            cmbTipoIdentificacion.SelectedIndex = 1
+        End If
+        Me.txt_Cedula.Text = lista.Item(0).identificacion
+        Me.txt_Apellidos.Text = lista.Item(0).apellidos
+        Me.txt_Nombres.Text = lista.Item(0).nombres
+        If lista.Item(0).estado = True Then
+            Me.rdb_Activo.Checked = True
+        Else
+            Me.rdb_Inactivo.Checked = True
+        End If
+    End Sub
+
+    Sub consultarEmpleados()
+        Dim lista As New List(Of capaEntidad.Empleado)
+        Dim obj As New cn_Empleado
+        lista = obj.buscaEmpleados(CInt(Me.txt_IdEmpleado.Text))
+        If lista.Item(0).area = "SIST" Then
+            cmb_Area.SelectedIndex = 0
+        ElseIf lista.Item(0).area = "RRHH" Then
+            cmb_Area.SelectedIndex = 1
+        ElseIf lista.Item(0).area = "CONT" Then
+            cmb_Area.SelectedIndex = 2
+        Else
+            cmb_Area.SelectedIndex = -1
+        End If
+    End Sub
+
+    Private Sub GrabarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsm_Grabar.Click
+        If variableNuevo = "N" Then
+            registroPersonas()
+            registroEmpleados()
+        Else
+            modificaPersonas()
+            modificaEmpleados()
+        End If
+
+    End Sub
+
+
+    Private Sub tsm_Salir_Click(sender As Object, e As EventArgs) Handles tsm_Salir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub tsm_Nuevo_Click(sender As Object, e As EventArgs) Handles tsm_Nuevo.Click
+        Me.tsm_Nuevo.Enabled = False
+        Me.tsm_Consultar.Enabled = False
+        Me.tsm_Grabar.Enabled = True
+        Me.tsm_Modificar.Enabled = False
+        Me.tsm_Cancelar.Enabled = True
+        HabilitarControles()
+        Me.txt_IdEmpleado.ReadOnly = True
+        LimpiarControles()
+        GenerarId()
+        Me.cmbTipoIdentificacion.Select()
+        variableNuevo = "N"
+    End Sub
+
+    Sub LimpiarControles()
+        Me.txt_IdEmpleado.Text = String.Empty
+        Me.cmbTipoIdentificacion.SelectedIndex = -1
+        Me.txt_Cedula.Text = String.Empty
+        Me.txt_Apellidos.Text = String.Empty
+        Me.txt_Nombres.Text = String.Empty
+        Me.dtp_FechaNacimiento.Value = Today
+        Me.cmb_Area.SelectedIndex = -1
+        Me.rdb_Activo.Checked = False
+        Me.rdb_Inactivo.Checked = False
+    End Sub
+
+    Sub HabilitarControles()
+        Me.txt_IdEmpleado.ReadOnly = False
+        Me.cmbTipoIdentificacion.Enabled = True
+        Me.txt_Cedula.ReadOnly = False
+        Me.txt_Apellidos.ReadOnly = False
+        Me.txt_Nombres.ReadOnly = False
+        Me.dtp_FechaNacimiento.Enabled = True
+        Me.cmb_Area.Enabled = True
+        Me.rdb_Activo.Enabled = True
+        Me.rdb_Inactivo.Enabled = True
+    End Sub
+
+    Sub InhabilitarControles()
+        Me.txt_IdEmpleado.ReadOnly = True
+        Me.cmbTipoIdentificacion.Enabled = False
+        Me.txt_Cedula.ReadOnly = True
+        Me.txt_Apellidos.ReadOnly = True
+        Me.txt_Nombres.ReadOnly = True
+        Me.dtp_FechaNacimiento.Enabled = False
+        Me.cmb_Area.Enabled = False
+        Me.rdb_Activo.Enabled = False
+        Me.rdb_Inactivo.Enabled = False
+    End Sub
+
+    Private Sub tsm_Cancelar_Click(sender As Object, e As EventArgs) Handles tsm_Cancelar.Click
+        Me.tsm_Nuevo.Enabled = True
+        Me.tsm_Consultar.Enabled = True
+        Me.tsm_Grabar.Enabled = False
+        Me.tsm_Modificar.Enabled = False
+        Me.tsm_Cancelar.Enabled = False
+        InhabilitarControles()
+        Me.txt_IdEmpleado.ReadOnly = False
+        Me.txt_IdEmpleado.Select()
+        LimpiarControles()
+        variableNuevo = "N"
+    End Sub
+
+    Private Sub frm_Empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.tsm_Nuevo.Enabled = True
+        Me.tsm_Consultar.Enabled = True
+        Me.tsm_Grabar.Enabled = False
+        Me.tsm_Modificar.Enabled = False
+        Me.tsm_Cancelar.Enabled = False
+        InhabilitarControles()
+        Me.txt_IdEmpleado.Select()
+        Me.txt_IdEmpleado.ReadOnly = False
+    End Sub
+
+    Private Sub tsm_Consultar_Click(sender As Object, e As EventArgs) Handles tsm_Consultar.Click
+        consultarPersonas()
+        consultarEmpleados()
+        Me.tsm_Modificar.Enabled = True
+    End Sub
+
+    Private Sub tsm_Modificar_Click(sender As Object, e As EventArgs) Handles tsm_Modificar.Click
+        variableNuevo = "M"
+        HabilitarControles()
+        Me.txt_IdEmpleado.ReadOnly = True
+        Me.tsm_Modificar.Enabled = False
+        Me.tsm_Grabar.Enabled = True
+        Me.tsm_Cancelar.Enabled = True
+        Me.tsm_Consultar.Enabled = False
+    End Sub
+
+
+
 End Class
+

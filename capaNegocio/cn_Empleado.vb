@@ -20,4 +20,17 @@ Public Class cn_Empleado
         objCapaDatos.registroEmpleados(obj)
     End Sub
 
+    'Implementamos la función que retorna la lista
+    Public Function buscaEmpleados(ByVal idPersona As Integer) As List(Of capaEntidad.Empleado)
+        Dim lista As New List(Of capaEntidad.Empleado)
+        Dim obj As New cd_Empleado
+        lista = obj.buscarEmpleados(idPersona)
+        Return lista
+    End Function
+
+    Public Sub modificaEmpleados(ByVal registros As capaEntidad.Empleado)
+        Dim Datos As New cd_Empleado
+        Datos.modificarEmpleados(registros)
+    End Sub
+
 End Class
