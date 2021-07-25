@@ -8,4 +8,9 @@
         Dim formulario As New frm_Empleado
         formulario.Show()
     End Sub
+
+    Private Sub MédicosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MédicosToolStripMenuItem.Click
+        Dim formulario As New frm_Medico
+        formulario.Show()
+    End Sub
 End Class

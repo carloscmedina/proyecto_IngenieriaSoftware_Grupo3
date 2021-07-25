@@ -82,22 +82,6 @@ Public Class frm_Empleado
     End Sub
 
 
-    'Sub modificarPersonas()
-    '    Dim Entidad As New Persona
-    '    Dim Negocio As New cn_Persona
-
-    '    With Entidad
-    '        .tipoIdentificacion = getTipoIdentificacion()
-    '        .identificacion = getIdentificacion()
-    '        .apellidos = getApellidos()
-    '        .nombres = getNombres()
-    '        .fechaNacimiento = getFechaNacimiento()
-    '        .estado = getEstado()
-    '    End With '
-    '    Negocio.modificaPersonas(Entidad)
-    'End Sub
-
-
     Sub modificaEmpleados()
         Dim Entidad As New Empleado
         Dim Negocio2 As New cn_Empleado
@@ -108,8 +92,6 @@ Public Class frm_Empleado
         End With '
         Negocio2.modificaEmpleados(Entidad)
     End Sub
-
-
 
 
     Sub consultarPersonas()

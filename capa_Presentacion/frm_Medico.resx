@@ -64,7 +64,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="NuevoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Nuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFySURBVDhPjZPbasJAEIZtn6NC38HiexbMhQ/gjYgS
@@ -76,7 +76,7 @@
         9RL8KMkLnJhz+Ra+xIBcHtwEPuIkYh2RE7oUBCkRsKxX4NMPAgj8As6yoTIL3qbiAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="ConsultarToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Consultar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhEAAQAIYAAE5WgtPc56jF6VN4w51fGsjy/sK/z6SUgNfDrIeVr/b4+7Hc/ue8beSxSoSDm/P4
         /ZW53Y3A/o1vXf3hctvh7/7rfJemwOfr7sZ8K9Hc8Vp2taHF7sLJ2pibu6qzwJqctbq/09fX12eBtej+
@@ -92,7 +92,7 @@
         KgEBADs=
 </value>
   </data>
-  <data name="GrabarToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Grabar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKWSURBVDhPjZJbTxNBGIb7l4AunhJ/hdeGU4FSMICI
@@ -109,7 +109,7 @@
         tvADsnSDdFRvkZn/hj5YH1XupZCZT87I6Y5k5Jq//QWbzBTt9kMQwwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ModificarToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Modificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKKSURBVDhPpZBZTxNhFIb5C956aYwxMfoPvBATlcQL
@@ -126,7 +126,7 @@
         bw8Vp2wPlidrevgnj/w+sw+SfgL6YjTWl3rf7AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="CancelarToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Cancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIySURBVDhPlZJrTxNBFIaJicnG36BWiYbISkDiDaEt
@@ -142,7 +142,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="SalirToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tsm_Salir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAA+hJREFUSEu1
         lHtMlXUYx89cKxQKnEFHQi00nazLwlyhUovNddnUNAkdhUBZmWXlElYtrD+yJs5ogA5tGtOIAkeUlhIS

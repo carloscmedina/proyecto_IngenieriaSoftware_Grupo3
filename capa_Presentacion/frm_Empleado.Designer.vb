@@ -330,6 +330,7 @@ Partial Class frm_Empleado
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "frm_Empleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mantenimiento de Empleados"

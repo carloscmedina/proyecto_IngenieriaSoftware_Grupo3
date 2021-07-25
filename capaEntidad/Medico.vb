@@ -1,10 +1,22 @@
 ﻿Public Class Medico
-    Private idMedico As Integer
-    Private estado As Boolean
+    Private _idPersona As Integer
+    Private _registroMedico As String
 
-    'Constructor, donde debemos pasar todos los datos  
-    Public Sub New(idMedico As Integer, estado As String)
-        Me.idMedico = idMedico
-        Me.estado = estado
-    End Sub
+    Public Property idPersona As Integer
+        Get
+            Return _idPersona
+        End Get
+        Set(value As Integer)
+            _idPersona = value
+        End Set
+    End Property
+
+    Public Property registroMedico As String
+        Get
+            Return _registroMedico
+        End Get
+        Set(value As String)
+            _registroMedico = value
+        End Set
+    End Property
 End Class
