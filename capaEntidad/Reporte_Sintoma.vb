@@ -1,18 +1,51 @@
 ﻿Public Class Reporte_Sintoma
-    Private idReporte As Integer
-    Private descripcion As String
-    Private idEmpleado As Integer
+    Private _id As Integer
+    Private _fecha As Date
+    Private _idEmpleado As Integer
+    Private _descripcion As String
 
+    Public Property id As Integer
+        Get
+            'retorna el id
+            Return _id
+        End Get
+        Set(value As Integer)
+            'viene asignado valor
+            _id = value
+        End Set
+    End Property
 
-    'Constructor, donde debemos pasar todos los datos  
-    Public Sub New(idReporte As Integer, descripcion As String, idEmpleado As Integer)
-        Me.idReporte = idReporte
-        Me.descripcion = descripcion
-        Me.idEmpleado = idEmpleado
-    End Sub
+    Public Property fecha As Date
+        Get
+            'retorna la fecha
+            Return _fecha
+        End Get
+        Set(value As Date)
+            'viene asignado valor
+            _fecha = value
+        End Set
+    End Property
 
-    Public Sub New()
+    Public Property idEmpleado As Integer
+        Get
+            'retorna el id
+            Return _idEmpleado
+        End Get
+        Set(value As Integer)
+            'viene asignado valor
+            _idEmpleado = value
+        End Set
+    End Property
 
-    End Sub
+    Public Property descripcion As String
+        Get
+            'retorna descripcion
+            Return _descripcion
+        End Get
+        Set(value As String)
+            'se asigna valor
+            _descripcion = value
+        End Set
+    End Property
 
 End Class

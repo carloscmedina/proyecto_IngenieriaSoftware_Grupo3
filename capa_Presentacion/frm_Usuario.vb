@@ -163,4 +163,7 @@ Public Class frm_Usuario
         Me.txt_Contrasenia.ReadOnly = True
     End Sub
 
+    Private Sub txt_IdEmpleado_TextChanged(sender As Object, e As EventArgs) Handles txt_IdEmpleado.TextChanged
+
+    End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 
-Public Class cd_Empleado
+Public Class cd_Reporte_Sintoma
 
     Dim objConexion As New cd_Conexion
     Dim da As New SqlDataAdapter
@@ -26,9 +26,10 @@ Public Class cd_Empleado
     'Función para generar el Id del registro nuevo
     Function generarId() As Integer
         Try
+
             cn = objConexion.Conectar
             cn.Open()
-            da = New SqlDataAdapter("sp_ObtenerUltimoIdPersonas", cn)
+            da = New SqlDataAdapter("sp_ObtenerUltimoIdReporte_Sintoma", cn)
             Dim r As Integer
             r = da.SelectCommand.ExecuteScalar
             Return r
@@ -40,15 +41,17 @@ Public Class cd_Empleado
 
     End Function
 
-    Sub registroEmpleados(ByVal obj As capaEntidad.Empleado)
+    Sub registroReportes_Sintomas(ByVal obj As capaEntidad.Reporte_Sintoma)
         Try
             cn = objConexion.Conectar
             cn.Open()
-            da = New SqlDataAdapter("sp_IngresarNuevoEmpleado", cn)
+            da = New SqlDataAdapter("sp_IngresarNuevoReporte_Sintoma", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("@idPersona", SqlDbType.Int).Value = obj.idPersona
-                .Add("@area", SqlDbType.VarChar).Value = obj.area
+                .Add("@id", SqlDbType.Int).Value = obj.id
+                .Add("@fecha", SqlDbType.Date).Value = obj.fecha
+                .Add("@idEmpleado", SqlDbType.Int).Value = obj.idEmpleado
+                .Add("@descripcion", SqlDbType.VarChar).Value = obj.descripcion
             End With
             da.SelectCommand.ExecuteNonQuery()
 
@@ -62,19 +65,21 @@ Public Class cd_Empleado
         End Try
     End Sub
 
-    Public Function buscarEmpleados(ByVal idPersona As Integer) As List(Of capaEntidad.Empleado)
-        Dim lista As New List(Of capaEntidad.Empleado)
+    Public Function buscarReportes_Sintomas(ByVal id As Integer) As List(Of capaEntidad.Reporte_Sintoma)
+        Dim lista As New List(Of capaEntidad.Reporte_Sintoma)
         cn = objConexion.Conectar
         cn.Open()
         Try
-            Dim cmd As New SqlCommand("sp_consultarEmpleado", cn)
+            Dim cmd As New SqlCommand("sp_consultarReporte_Sintoma", cn)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@idPersona", idPersona)
+            cmd.Parameters.AddWithValue("@id", id)
             Dim dr As SqlDataReader
             dr = cmd.ExecuteReader
             While dr.Read
-                Dim reg As New capaEntidad.Empleado
-                reg.area = dr.GetValue(1).ToString()
+                Dim reg As New capaEntidad.Reporte_Sintoma
+                reg.fecha = dr.GetValue(1).ToString()
+                reg.idEmpleado = dr.GetValue(2).ToString()
+                reg.descripcion = dr.GetValue(3).ToString()
                 lista.Add(reg)
             End While
             dr.Close()
@@ -84,17 +89,19 @@ Public Class cd_Empleado
         Return lista
     End Function
 
-    'para modificar Empleados'
-    Public Sub modificarEmpleados(ByVal registros As capaEntidad.Empleado)
+    'para modificar Registros síntomas'
+    Public Sub modificarReporte_Sintoma(ByVal registros As capaEntidad.Reporte_Sintoma)
         cn = objConexion.Conectar
         cn.Open()
 
-        Dim cmd As New SqlCommand("sp_ModificarEmpleado", cn)
+        Dim cmd As New SqlCommand("sp_ModificarReporte_Sintoma", cn)
         cmd.CommandType = CommandType.StoredProcedure
 
         With cmd.Parameters
-            .Add("@idPersona", SqlDbType.Int).Value = registros.idPersona
-            .Add("@area", SqlDbType.VarChar).Value = registros.area
+            .Add("@id", SqlDbType.Int).Value = registros.id
+            .Add("@fecha", SqlDbType.Date).Value = registros.fecha
+            .Add("@idEmpleado", SqlDbType.Int).Value = registros.idEmpleado
+            .Add("@descripcion", SqlDbType.Date).Value = registros.descripcion
         End With
         cmd.ExecuteNonQuery()
         MsgBox("Registro modificado con éxito", MsgBoxStyle.Information)
