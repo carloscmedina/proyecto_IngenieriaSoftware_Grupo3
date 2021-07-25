@@ -2,12 +2,6 @@
     Private _idPersona As Integer
     Private _area As String
 
-    ''Constructor, donde debemos pasar todos los datos  
-    'Public Sub New(idEmpleado As Integer, area As String)
-    '    Me.idEmpleado = idEmpleado
-    '    Me.area = area
-    'End Sub
-
     Public Property idPersona As Integer
         Get
             'retorna el id

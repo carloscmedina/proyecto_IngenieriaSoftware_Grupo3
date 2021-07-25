@@ -7,6 +7,29 @@ Public Class cd_Usuario
     Dim da As New SqlDataAdapter
     Dim cn As SqlConnection
 
+    Public Function Validar(ByVal registro As capaEntidad.Usuario) As Boolean
+        Dim logeo As Boolean
+        cn = objConexion.Conectar
+        cn.Open()
+        Dim cmd As New SqlCommand("sp_Validar", cn)
+        cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@usuario", registro.usuario)
+        cmd.Parameters.AddWithValue("@contrasenia", registro.contrasenia)
+        cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue
+            Dim valor As Integer
+            cmd.ExecuteNonQuery()
+            valor = CType(cmd.Parameters.Item("@RETURN_VALUE").Value, Integer)
+            If valor >= 0 Then
+            logeo = True
+        Else
+                logeo = False
+            End If
+        cn.Close()
+        cn.Dispose()
+
+        Return logeo
+    End Function
+
     'Función que devuelve la lista de personas desde la base de datos
     Function listarPersonas() As DataSet
         Try

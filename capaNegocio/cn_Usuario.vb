@@ -28,4 +28,13 @@ Public Class cn_Usuario
         Datos.modificarUsuarios(registros)
     End Sub
 
+    'Para El login
+    Public Function Validar(ByVal registros As Usuario) As Boolean
+        Dim valor As Boolean
+        Dim obj As New cd_Usuario
+        valor = obj.Validar(registros)
+
+        Return valor
+    End Function
+
 End Class

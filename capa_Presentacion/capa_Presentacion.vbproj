@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>capa_Presentacion</RootNamespace>
-    <StartupObject>capa_Presentacion.frm_MenuPrincipal</StartupObject>
+    <StartupObject>capa_Presentacion.frm_IniciarSesion</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

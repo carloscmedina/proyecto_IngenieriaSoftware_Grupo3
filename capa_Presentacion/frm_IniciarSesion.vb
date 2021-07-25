@@ -1,19 +1,42 @@
+Option Strict On
+Option Explicit On
+
+Imports capaNegocio
+Imports capaEntidad
+
 Public Class frm_IniciarSesion
 
-    ' TODO: inserte el código para realizar autenticación personalizada usando el nombre de usuario y la contraseña proporcionada 
-    ' (Consulte https://go.microsoft.com/fwlink/?LinkId=35339).  
-    ' El objeto principal personalizado se puede adjuntar al objeto principal del subproceso actual como se indica a continuación: 
-    '     My.User.CurrentPrincipal = CustomPrincipal
-    ' donde CustomPrincipal es la implementación de IPrincipal utilizada para realizar la autenticación. 
-    ' Posteriormente, My.User devolverá la información de identidad encapsulada en el objeto CustomPrincipal
-    ' como el nombre de usuario, nombre para mostrar, etc.
-
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Me.Close()
+        logearse()
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Close()
+    End Sub
+
+    Private Function Validar(ByVal registros As Usuario) As Boolean
+        Dim valor As Boolean
+        Dim obj As New cn_Usuario
+        valor = obj.Validar(registros)
+        Return valor
+    End Function
+
+    Private Sub logearse()
+        Dim autorizado As Boolean
+        Dim registros As New Usuario
+        With registros
+            .usuario = txt_Usuario.Text
+            .contrasenia = txt_Contrasenia.Text
+        End With
+        autorizado = Validar(registros)
+
+        If autorizado Then
+            frm_MenuPrincipal.Show()
+            frm_MenuPrincipal.Text = "Usuario : " + registros.usuario
+
+        Else
+            MessageBox.Show("usuario o contraseña incorrecta")
+        End If
     End Sub
 
 End Class
