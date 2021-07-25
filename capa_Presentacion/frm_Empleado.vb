@@ -136,7 +136,6 @@ Public Class frm_Empleado
             modificaPersonas()
             modificaEmpleados()
         End If
-
     End Sub
 
 
@@ -233,8 +232,6 @@ Public Class frm_Empleado
         Me.tsm_Cancelar.Enabled = True
         Me.tsm_Consultar.Enabled = False
     End Sub
-
-
 
 End Class
 

@@ -132,9 +132,6 @@ Public Class frm_Medico
 
     End Sub
 
-
-
-
     Sub LimpiarControles()
         Me.txt_IdMedico.Text = String.Empty
         Me.cmbTipoIdentificacion.SelectedIndex = -1

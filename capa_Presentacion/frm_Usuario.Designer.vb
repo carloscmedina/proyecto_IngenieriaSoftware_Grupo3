@@ -27,17 +27,14 @@ Partial Class frm_Usuario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_ConfirmarContrasenia = New System.Windows.Forms.TextBox()
         Me.txt_NombreEmpleado = New System.Windows.Forms.TextBox()
-        Me.txt_Empleado = New System.Windows.Forms.TextBox()
+        Me.txt_IdEmpleado = New System.Windows.Forms.TextBox()
         Me.lbl_Empleado = New System.Windows.Forms.Label()
-        Me.cmb_Area = New System.Windows.Forms.ComboBox()
+        Me.cmb_Tipo = New System.Windows.Forms.ComboBox()
         Me.lbl_Area = New System.Windows.Forms.Label()
         Me.txt_Contrasenia = New System.Windows.Forms.TextBox()
         Me.txt_Usuario = New System.Windows.Forms.TextBox()
         Me.lbl_Nombres = New System.Windows.Forms.Label()
         Me.lbl_Apellidos = New System.Windows.Forms.Label()
-        Me.rdb_Inactivo = New System.Windows.Forms.RadioButton()
-        Me.rdb_Activo = New System.Windows.Forms.RadioButton()
-        Me.lbl_Estado = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lbl_Rol = New System.Windows.Forms.Label()
         Me.lbl_Usuario = New System.Windows.Forms.Label()
@@ -57,17 +54,14 @@ Partial Class frm_Usuario
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txt_ConfirmarContrasenia)
         Me.GroupBox1.Controls.Add(Me.txt_NombreEmpleado)
-        Me.GroupBox1.Controls.Add(Me.txt_Empleado)
+        Me.GroupBox1.Controls.Add(Me.txt_IdEmpleado)
         Me.GroupBox1.Controls.Add(Me.lbl_Empleado)
-        Me.GroupBox1.Controls.Add(Me.cmb_Area)
+        Me.GroupBox1.Controls.Add(Me.cmb_Tipo)
         Me.GroupBox1.Controls.Add(Me.lbl_Area)
         Me.GroupBox1.Controls.Add(Me.txt_Contrasenia)
         Me.GroupBox1.Controls.Add(Me.txt_Usuario)
         Me.GroupBox1.Controls.Add(Me.lbl_Nombres)
         Me.GroupBox1.Controls.Add(Me.lbl_Apellidos)
-        Me.GroupBox1.Controls.Add(Me.rdb_Inactivo)
-        Me.GroupBox1.Controls.Add(Me.rdb_Activo)
-        Me.GroupBox1.Controls.Add(Me.lbl_Estado)
         Me.GroupBox1.Location = New System.Drawing.Point(11, 34)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -103,12 +97,12 @@ Partial Class frm_Usuario
         Me.txt_NombreEmpleado.Size = New System.Drawing.Size(278, 27)
         Me.txt_NombreEmpleado.TabIndex = 2
         '
-        'txt_Empleado
+        'txt_IdEmpleado
         '
-        Me.txt_Empleado.Location = New System.Drawing.Point(114, 26)
-        Me.txt_Empleado.Name = "txt_Empleado"
-        Me.txt_Empleado.Size = New System.Drawing.Size(83, 27)
-        Me.txt_Empleado.TabIndex = 1
+        Me.txt_IdEmpleado.Location = New System.Drawing.Point(114, 26)
+        Me.txt_IdEmpleado.Name = "txt_IdEmpleado"
+        Me.txt_IdEmpleado.Size = New System.Drawing.Size(83, 27)
+        Me.txt_IdEmpleado.TabIndex = 1
         '
         'lbl_Empleado
         '
@@ -119,20 +113,20 @@ Partial Class frm_Usuario
         Me.lbl_Empleado.TabIndex = 24
         Me.lbl_Empleado.Text = "Empleado"
         '
-        'cmb_Area
+        'cmb_Tipo
         '
-        Me.cmb_Area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_Area.FormattingEnabled = True
-        Me.cmb_Area.Items.AddRange(New Object() {"CONT Contabilidad", "RRHH Recursos Humanos", "SIST Sistemas", "PROD Producción", "CALI Calidad", "SEGU Seguridad Industrial"})
-        Me.cmb_Area.Location = New System.Drawing.Point(114, 61)
-        Me.cmb_Area.Name = "cmb_Area"
-        Me.cmb_Area.Size = New System.Drawing.Size(367, 28)
-        Me.cmb_Area.TabIndex = 5
+        Me.cmb_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_Tipo.FormattingEnabled = True
+        Me.cmb_Tipo.Items.AddRange(New Object() {"A Administrador", "U Usuario"})
+        Me.cmb_Tipo.Location = New System.Drawing.Point(114, 82)
+        Me.cmb_Tipo.Name = "cmb_Tipo"
+        Me.cmb_Tipo.Size = New System.Drawing.Size(367, 28)
+        Me.cmb_Tipo.TabIndex = 5
         '
         'lbl_Area
         '
         Me.lbl_Area.AutoSize = True
-        Me.lbl_Area.Location = New System.Drawing.Point(19, 64)
+        Me.lbl_Area.Location = New System.Drawing.Point(19, 85)
         Me.lbl_Area.Name = "lbl_Area"
         Me.lbl_Area.Size = New System.Drawing.Size(39, 20)
         Me.lbl_Area.TabIndex = 20
@@ -173,40 +167,6 @@ Partial Class frm_Usuario
         Me.lbl_Apellidos.Size = New System.Drawing.Size(59, 20)
         Me.lbl_Apellidos.TabIndex = 12
         Me.lbl_Apellidos.Text = "Usuario"
-        '
-        'rdb_Inactivo
-        '
-        Me.rdb_Inactivo.AutoSize = True
-        Me.rdb_Inactivo.Location = New System.Drawing.Point(507, 69)
-        Me.rdb_Inactivo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.rdb_Inactivo.Name = "rdb_Inactivo"
-        Me.rdb_Inactivo.Size = New System.Drawing.Size(82, 24)
-        Me.rdb_Inactivo.TabIndex = 4
-        Me.rdb_Inactivo.TabStop = True
-        Me.rdb_Inactivo.Text = "Inactivo"
-        Me.rdb_Inactivo.UseVisualStyleBackColor = True
-        '
-        'rdb_Activo
-        '
-        Me.rdb_Activo.AutoSize = True
-        Me.rdb_Activo.Checked = True
-        Me.rdb_Activo.Location = New System.Drawing.Point(507, 37)
-        Me.rdb_Activo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.rdb_Activo.Name = "rdb_Activo"
-        Me.rdb_Activo.Size = New System.Drawing.Size(72, 24)
-        Me.rdb_Activo.TabIndex = 3
-        Me.rdb_Activo.TabStop = True
-        Me.rdb_Activo.Text = "Activo"
-        Me.rdb_Activo.UseVisualStyleBackColor = True
-        '
-        'lbl_Estado
-        '
-        Me.lbl_Estado.AutoSize = True
-        Me.lbl_Estado.Location = New System.Drawing.Point(525, 13)
-        Me.lbl_Estado.Name = "lbl_Estado"
-        Me.lbl_Estado.Size = New System.Drawing.Size(54, 20)
-        Me.lbl_Estado.TabIndex = 1
-        Me.lbl_Estado.Text = "Estado"
         '
         'Label7
         '
@@ -301,7 +261,7 @@ Partial Class frm_Usuario
         Me.MaximizeBox = False
         Me.Name = "frm_Usuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frm_Usuario"
+        Me.Text = "Mantenimiento de Usuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
@@ -312,7 +272,7 @@ Partial Class frm_Usuario
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents cmb_Area As ComboBox
+    Friend WithEvents cmb_Tipo As ComboBox
     Friend WithEvents lbl_Area As Label
     Friend WithEvents txt_Contrasenia As TextBox
     Friend WithEvents txt_Usuario As TextBox
@@ -321,11 +281,8 @@ Partial Class frm_Usuario
     Friend WithEvents Label1 As Label
     Friend WithEvents txt_ConfirmarContrasenia As TextBox
     Friend WithEvents txt_NombreEmpleado As TextBox
-    Friend WithEvents txt_Empleado As TextBox
+    Friend WithEvents txt_IdEmpleado As TextBox
     Friend WithEvents lbl_Empleado As Label
-    Friend WithEvents rdb_Inactivo As RadioButton
-    Friend WithEvents rdb_Activo As RadioButton
-    Friend WithEvents lbl_Estado As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lbl_Rol As Label
     Friend WithEvents lbl_Usuario As Label

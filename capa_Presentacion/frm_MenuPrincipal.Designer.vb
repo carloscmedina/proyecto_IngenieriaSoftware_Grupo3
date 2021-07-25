@@ -71,7 +71,7 @@ Partial Class frm_MenuPrincipal
         '
         'MantenimientosToolStripMenuItem
         '
-        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.MédicosToolStripMenuItem})
+        Me.MantenimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.MédicosToolStripMenuItem, Me.UsuariosToolStripMenuItem})
         Me.MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
         Me.MantenimientosToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
         Me.MantenimientosToolStripMenuItem.Text = "Mantenimientos"
