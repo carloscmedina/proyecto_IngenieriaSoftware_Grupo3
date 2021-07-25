@@ -22,22 +22,27 @@ Public Class frm_Empleado
     End Function
 
     Function getIdentificacion() As String
+        'retorna contenido Cedula
         Return txt_Cedula.Text.Trim
     End Function
 
     Function getApellidos() As String
+        'retorna contenido Apellidos
         Return txt_Apellidos.Text.Trim
     End Function
 
     Function getNombres() As String
+        'retorna contenido Nombres
         Return txt_Nombres.Text.Trim
     End Function
 
     Function getFechaNacimiento() As Date
+        'retorna contenido fecha nac
         Return dtp_FechaNacimiento.Value
     End Function
 
     Function getArea() As String
+        'retorna contenido area
         Return Mid(cmb_Area.Text, 1, 4).Trim
     End Function
 
@@ -98,6 +103,7 @@ Public Class frm_Empleado
         Dim lista As New List(Of capaEntidad.Persona)
         Dim obj As New cn_Persona
         lista = obj.buscaPersonas(CInt(Me.txt_IdEmpleado.Text))
+        'considero C para cedula y P para pasaporte
         If lista.Item(0).tipoIdentificacion = "C" Then
             cmbTipoIdentificacion.SelectedIndex = 0
         ElseIf lista.Item(0).tipoIdentificacion = "P" Then
@@ -117,6 +123,7 @@ Public Class frm_Empleado
         Dim lista As New List(Of capaEntidad.Empleado)
         Dim obj As New cn_Empleado
         lista = obj.buscaEmpleados(CInt(Me.txt_IdEmpleado.Text))
+        'seleccion de acuerdo al area
         If lista.Item(0).area = "SIST" Then
             cmb_Area.SelectedIndex = 0
         ElseIf lista.Item(0).area = "RRHH" Then
@@ -145,6 +152,7 @@ Public Class frm_Empleado
     End Sub
 
     Private Sub tsm_Nuevo_Click(sender As Object, e As EventArgs) Handles tsm_Nuevo.Click
+        'sincronizacion de controles
         Me.tsm_Nuevo.Enabled = False
         Me.tsm_Consultar.Enabled = False
         Me.tsm_Grabar.Enabled = True
@@ -159,6 +167,7 @@ Public Class frm_Empleado
     End Sub
 
     Sub LimpiarControles()
+        'encerar campos
         Me.txt_IdEmpleado.Text = String.Empty
         Me.cmbTipoIdentificacion.SelectedIndex = -1
         Me.txt_Cedula.Text = String.Empty
