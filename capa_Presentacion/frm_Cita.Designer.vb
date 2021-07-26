@@ -24,17 +24,21 @@ Partial Class frm_Cita
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Cita))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cmb_Horarios = New System.Windows.Forms.ComboBox()
+        Me.txt_Diagnostico = New System.Windows.Forms.TextBox()
+        Me.lbl_Diagnostico = New System.Windows.Forms.Label()
+        Me.txt_Medico = New System.Windows.Forms.TextBox()
+        Me.txt_IdMedico = New System.Windows.Forms.TextBox()
+        Me.rdb_AltaMedicaNo = New System.Windows.Forms.RadioButton()
+        Me.rdb_AltaMedicaSi = New System.Windows.Forms.RadioButton()
+        Me.lbl_Estado = New System.Windows.Forms.Label()
         Me.btn_VerExamen = New System.Windows.Forms.Button()
         Me.txt_IdExamen = New System.Windows.Forms.TextBox()
         Me.lbl_Examen = New System.Windows.Forms.Label()
         Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.cmb_Doctor = New System.Windows.Forms.ComboBox()
         Me.txt_NombreEmpleado = New System.Windows.Forms.TextBox()
         Me.txt_IdEmpleado = New System.Windows.Forms.TextBox()
-        Me.txt_IdCita = New System.Windows.Forms.TextBox()
-        Me.lbl_Horario = New System.Windows.Forms.Label()
+        Me.txt_Id = New System.Windows.Forms.TextBox()
         Me.lbl_Medico = New System.Windows.Forms.Label()
         Me.lbl_Empleado = New System.Windows.Forms.Label()
         Me.lbl_IdCita = New System.Windows.Forms.Label()
@@ -42,45 +46,106 @@ Partial Class frm_Cita
         Me.lbl_Rol = New System.Windows.Forms.Label()
         Me.lbl_Usuario = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GrabarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Nuevo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Consultar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Grabar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Modificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Cancelar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsm_Salir = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.cmb_Horarios)
+        Me.GroupBox1.Controls.Add(Me.txt_Diagnostico)
+        Me.GroupBox1.Controls.Add(Me.lbl_Diagnostico)
+        Me.GroupBox1.Controls.Add(Me.txt_Medico)
+        Me.GroupBox1.Controls.Add(Me.txt_IdMedico)
+        Me.GroupBox1.Controls.Add(Me.rdb_AltaMedicaNo)
+        Me.GroupBox1.Controls.Add(Me.rdb_AltaMedicaSi)
+        Me.GroupBox1.Controls.Add(Me.lbl_Estado)
         Me.GroupBox1.Controls.Add(Me.btn_VerExamen)
         Me.GroupBox1.Controls.Add(Me.txt_IdExamen)
         Me.GroupBox1.Controls.Add(Me.lbl_Examen)
         Me.GroupBox1.Controls.Add(Me.dtp_Fecha)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.cmb_Doctor)
         Me.GroupBox1.Controls.Add(Me.txt_NombreEmpleado)
         Me.GroupBox1.Controls.Add(Me.txt_IdEmpleado)
-        Me.GroupBox1.Controls.Add(Me.txt_IdCita)
-        Me.GroupBox1.Controls.Add(Me.lbl_Horario)
+        Me.GroupBox1.Controls.Add(Me.txt_Id)
         Me.GroupBox1.Controls.Add(Me.lbl_Medico)
         Me.GroupBox1.Controls.Add(Me.lbl_Empleado)
         Me.GroupBox1.Controls.Add(Me.lbl_IdCita)
         Me.GroupBox1.Location = New System.Drawing.Point(11, 31)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(559, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(559, 254)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'cmb_Horarios
+        'txt_Diagnostico
         '
-        Me.cmb_Horarios.FormattingEnabled = True
-        Me.cmb_Horarios.Location = New System.Drawing.Point(110, 164)
-        Me.cmb_Horarios.Name = "cmb_Horarios"
-        Me.cmb_Horarios.Size = New System.Drawing.Size(183, 28)
-        Me.cmb_Horarios.TabIndex = 14
+        Me.txt_Diagnostico.Location = New System.Drawing.Point(110, 160)
+        Me.txt_Diagnostico.Multiline = True
+        Me.txt_Diagnostico.Name = "txt_Diagnostico"
+        Me.txt_Diagnostico.Size = New System.Drawing.Size(305, 81)
+        Me.txt_Diagnostico.TabIndex = 23
+        '
+        'lbl_Diagnostico
+        '
+        Me.lbl_Diagnostico.AutoSize = True
+        Me.lbl_Diagnostico.Location = New System.Drawing.Point(15, 162)
+        Me.lbl_Diagnostico.Name = "lbl_Diagnostico"
+        Me.lbl_Diagnostico.Size = New System.Drawing.Size(89, 20)
+        Me.lbl_Diagnostico.TabIndex = 22
+        Me.lbl_Diagnostico.Text = "Diagnóstico"
+        '
+        'txt_Medico
+        '
+        Me.txt_Medico.Location = New System.Drawing.Point(199, 88)
+        Me.txt_Medico.Name = "txt_Medico"
+        Me.txt_Medico.ReadOnly = True
+        Me.txt_Medico.Size = New System.Drawing.Size(348, 27)
+        Me.txt_Medico.TabIndex = 21
+        '
+        'txt_IdMedico
+        '
+        Me.txt_IdMedico.Location = New System.Drawing.Point(110, 88)
+        Me.txt_IdMedico.Name = "txt_IdMedico"
+        Me.txt_IdMedico.Size = New System.Drawing.Size(83, 27)
+        Me.txt_IdMedico.TabIndex = 20
+        '
+        'rdb_AltaMedicaNo
+        '
+        Me.rdb_AltaMedicaNo.AutoSize = True
+        Me.rdb_AltaMedicaNo.Location = New System.Drawing.Point(490, 160)
+        Me.rdb_AltaMedicaNo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.rdb_AltaMedicaNo.Name = "rdb_AltaMedicaNo"
+        Me.rdb_AltaMedicaNo.Size = New System.Drawing.Size(50, 24)
+        Me.rdb_AltaMedicaNo.TabIndex = 19
+        Me.rdb_AltaMedicaNo.TabStop = True
+        Me.rdb_AltaMedicaNo.Text = "No"
+        Me.rdb_AltaMedicaNo.UseVisualStyleBackColor = True
+        '
+        'rdb_AltaMedicaSi
+        '
+        Me.rdb_AltaMedicaSi.AutoSize = True
+        Me.rdb_AltaMedicaSi.Location = New System.Drawing.Point(490, 128)
+        Me.rdb_AltaMedicaSi.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.rdb_AltaMedicaSi.Name = "rdb_AltaMedicaSi"
+        Me.rdb_AltaMedicaSi.Size = New System.Drawing.Size(42, 24)
+        Me.rdb_AltaMedicaSi.TabIndex = 18
+        Me.rdb_AltaMedicaSi.TabStop = True
+        Me.rdb_AltaMedicaSi.Text = "Si"
+        Me.rdb_AltaMedicaSi.UseVisualStyleBackColor = True
+        '
+        'lbl_Estado
+        '
+        Me.lbl_Estado.AutoSize = True
+        Me.lbl_Estado.Location = New System.Drawing.Point(377, 128)
+        Me.lbl_Estado.Name = "lbl_Estado"
+        Me.lbl_Estado.Size = New System.Drawing.Size(89, 20)
+        Me.lbl_Estado.TabIndex = 17
+        Me.lbl_Estado.Text = "Alta médica"
         '
         'btn_VerExamen
         '
@@ -124,18 +189,11 @@ Partial Class frm_Cita
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Fecha"
         '
-        'cmb_Doctor
-        '
-        Me.cmb_Doctor.FormattingEnabled = True
-        Me.cmb_Doctor.Location = New System.Drawing.Point(110, 88)
-        Me.cmb_Doctor.Name = "cmb_Doctor"
-        Me.cmb_Doctor.Size = New System.Drawing.Size(437, 28)
-        Me.cmb_Doctor.TabIndex = 11
-        '
         'txt_NombreEmpleado
         '
         Me.txt_NombreEmpleado.Location = New System.Drawing.Point(199, 51)
         Me.txt_NombreEmpleado.Name = "txt_NombreEmpleado"
+        Me.txt_NombreEmpleado.ReadOnly = True
         Me.txt_NombreEmpleado.Size = New System.Drawing.Size(348, 27)
         Me.txt_NombreEmpleado.TabIndex = 10
         '
@@ -146,21 +204,12 @@ Partial Class frm_Cita
         Me.txt_IdEmpleado.Size = New System.Drawing.Size(83, 27)
         Me.txt_IdEmpleado.TabIndex = 7
         '
-        'txt_IdCita
+        'txt_Id
         '
-        Me.txt_IdCita.Location = New System.Drawing.Point(110, 16)
-        Me.txt_IdCita.Name = "txt_IdCita"
-        Me.txt_IdCita.Size = New System.Drawing.Size(83, 27)
-        Me.txt_IdCita.TabIndex = 5
-        '
-        'lbl_Horario
-        '
-        Me.lbl_Horario.AutoSize = True
-        Me.lbl_Horario.Location = New System.Drawing.Point(16, 172)
-        Me.lbl_Horario.Name = "lbl_Horario"
-        Me.lbl_Horario.Size = New System.Drawing.Size(60, 20)
-        Me.lbl_Horario.TabIndex = 3
-        Me.lbl_Horario.Text = "Horario"
+        Me.txt_Id.Location = New System.Drawing.Point(110, 16)
+        Me.txt_Id.Name = "txt_Id"
+        Me.txt_Id.Size = New System.Drawing.Size(83, 27)
+        Me.txt_Id.TabIndex = 5
         '
         'lbl_Medico
         '
@@ -192,7 +241,7 @@ Partial Class frm_Cita
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(70, 253)
+        Me.Label7.Location = New System.Drawing.Point(69, 288)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(13, 20)
         Me.Label7.TabIndex = 19
@@ -201,7 +250,7 @@ Partial Class frm_Cita
         'lbl_Rol
         '
         Me.lbl_Rol.AutoSize = True
-        Me.lbl_Rol.Location = New System.Drawing.Point(89, 253)
+        Me.lbl_Rol.Location = New System.Drawing.Point(88, 288)
         Me.lbl_Rol.Name = "lbl_Rol"
         Me.lbl_Rol.Size = New System.Drawing.Size(27, 20)
         Me.lbl_Rol.TabIndex = 18
@@ -210,7 +259,7 @@ Partial Class frm_Cita
         'lbl_Usuario
         '
         Me.lbl_Usuario.AutoSize = True
-        Me.lbl_Usuario.Location = New System.Drawing.Point(11, 253)
+        Me.lbl_Usuario.Location = New System.Drawing.Point(10, 288)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(57, 20)
         Me.lbl_Usuario.TabIndex = 17
@@ -219,68 +268,70 @@ Partial Class frm_Cita
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.GrabarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.CancelarToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsm_Nuevo, Me.tsm_Consultar, Me.tsm_Grabar, Me.tsm_Modificar, Me.tsm_Cancelar, Me.tsm_Salir})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
         Me.MenuStrip1.Size = New System.Drawing.Size(586, 30)
-        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.TabIndex = 22
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'NuevoToolStripMenuItem
+        'tsm_Nuevo
         '
-        Me.NuevoToolStripMenuItem.Image = CType(resources.GetObject("NuevoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo"
+        Me.tsm_Nuevo.Image = CType(resources.GetObject("tsm_Nuevo.Image"), System.Drawing.Image)
+        Me.tsm_Nuevo.Name = "tsm_Nuevo"
+        Me.tsm_Nuevo.Size = New System.Drawing.Size(86, 24)
+        Me.tsm_Nuevo.Text = "Nuevo"
         '
-        'ConsultarToolStripMenuItem
+        'tsm_Consultar
         '
-        Me.ConsultarToolStripMenuItem.Image = CType(resources.GetObject("ConsultarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        Me.tsm_Consultar.Image = CType(resources.GetObject("tsm_Consultar.Image"), System.Drawing.Image)
+        Me.tsm_Consultar.Name = "tsm_Consultar"
+        Me.tsm_Consultar.Size = New System.Drawing.Size(105, 24)
+        Me.tsm_Consultar.Text = "Consultar"
         '
-        'GrabarToolStripMenuItem
+        'tsm_Grabar
         '
-        Me.GrabarToolStripMenuItem.Image = CType(resources.GetObject("GrabarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.GrabarToolStripMenuItem.Name = "GrabarToolStripMenuItem"
-        Me.GrabarToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.GrabarToolStripMenuItem.Text = "Grabar"
+        Me.tsm_Grabar.Image = CType(resources.GetObject("tsm_Grabar.Image"), System.Drawing.Image)
+        Me.tsm_Grabar.Name = "tsm_Grabar"
+        Me.tsm_Grabar.Size = New System.Drawing.Size(88, 24)
+        Me.tsm_Grabar.Text = "Grabar"
         '
-        'ModificarToolStripMenuItem
+        'tsm_Modificar
         '
-        Me.ModificarToolStripMenuItem.Image = CType(resources.GetObject("ModificarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
+        Me.tsm_Modificar.Image = CType(resources.GetObject("tsm_Modificar.Image"), System.Drawing.Image)
+        Me.tsm_Modificar.Name = "tsm_Modificar"
+        Me.tsm_Modificar.Size = New System.Drawing.Size(107, 24)
+        Me.tsm_Modificar.Text = "Modificar"
         '
-        'CancelarToolStripMenuItem
+        'tsm_Cancelar
         '
-        Me.CancelarToolStripMenuItem.Image = CType(resources.GetObject("CancelarToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(100, 24)
-        Me.CancelarToolStripMenuItem.Text = "Cancelar"
+        Me.tsm_Cancelar.Image = CType(resources.GetObject("tsm_Cancelar.Image"), System.Drawing.Image)
+        Me.tsm_Cancelar.Name = "tsm_Cancelar"
+        Me.tsm_Cancelar.Size = New System.Drawing.Size(100, 24)
+        Me.tsm_Cancelar.Text = "Cancelar"
         '
-        'SalirToolStripMenuItem
+        'tsm_Salir
         '
-        Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
-        Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.tsm_Salir.Image = CType(resources.GetObject("tsm_Salir.Image"), System.Drawing.Image)
+        Me.tsm_Salir.Name = "tsm_Salir"
+        Me.tsm_Salir.Size = New System.Drawing.Size(72, 24)
+        Me.tsm_Salir.Text = "Salir"
         '
         'frm_Cita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(586, 291)
+        Me.ClientSize = New System.Drawing.Size(586, 318)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.lbl_Rol)
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "frm_Cita"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cita"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -294,26 +345,30 @@ Partial Class frm_Cita
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents dtp_Fecha As DateTimePicker
     Friend WithEvents Label8 As Label
-    Friend WithEvents cmb_Doctor As ComboBox
     Friend WithEvents txt_NombreEmpleado As TextBox
     Friend WithEvents txt_IdEmpleado As TextBox
-    Friend WithEvents txt_IdCita As TextBox
-    Friend WithEvents lbl_Horario As Label
+    Friend WithEvents txt_Id As TextBox
     Friend WithEvents lbl_Medico As Label
     Friend WithEvents lbl_Empleado As Label
     Friend WithEvents lbl_IdCita As Label
-    Friend WithEvents cmb_Horarios As ComboBox
     Friend WithEvents btn_VerExamen As Button
     Friend WithEvents txt_IdExamen As TextBox
     Friend WithEvents lbl_Examen As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lbl_Rol As Label
     Friend WithEvents lbl_Usuario As Label
+    Friend WithEvents rdb_AltaMedicaNo As RadioButton
+    Friend WithEvents rdb_AltaMedicaSi As RadioButton
+    Friend WithEvents lbl_Estado As Label
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents NuevoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GrabarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsm_Nuevo As ToolStripMenuItem
+    Friend WithEvents tsm_Consultar As ToolStripMenuItem
+    Friend WithEvents tsm_Grabar As ToolStripMenuItem
+    Friend WithEvents tsm_Modificar As ToolStripMenuItem
+    Friend WithEvents tsm_Cancelar As ToolStripMenuItem
+    Friend WithEvents tsm_Salir As ToolStripMenuItem
+    Friend WithEvents txt_Medico As TextBox
+    Friend WithEvents txt_IdMedico As TextBox
+    Friend WithEvents txt_Diagnostico As TextBox
+    Friend WithEvents lbl_Diagnostico As Label
 End Class

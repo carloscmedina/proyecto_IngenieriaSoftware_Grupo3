@@ -184,4 +184,8 @@ Public Class frm_Examen
         Me.txt_Id.Select()
         Me.txt_Id.ReadOnly = False
     End Sub
+
+    Private Sub txt_IdEmpleado_TextChanged(sender As Object, e As EventArgs) Handles txt_IdEmpleado.TextChanged
+
+    End Sub
 End Class

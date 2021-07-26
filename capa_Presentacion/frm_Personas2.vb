@@ -15,7 +15,11 @@ Public Class frm_Personas2
             Dim frm As frm_Examen = CType(Owner, frm_Examen)
             frm.txt_IdMedico.Text = dgv_Personas2.CurrentRow.Cells(0).Value.ToString()
             frm.txt_Medico.Text = dgv_Personas2.CurrentRow.Cells(2).Value.ToString()
-        End If
+        ElseIf Application.OpenForms().OfType(Of frm_Cita).Any Then
+            Dim frm As frm_Cita = CType(Owner, frm_Cita)
+            frm.txt_IdMedico.Text = dgv_Personas2.CurrentRow.Cells(0).Value.ToString()
+                frm.txt_Medico.Text = dgv_Personas2.CurrentRow.Cells(2).Value.ToString()
+            End If
         Me.Close()
     End Sub
 End Class

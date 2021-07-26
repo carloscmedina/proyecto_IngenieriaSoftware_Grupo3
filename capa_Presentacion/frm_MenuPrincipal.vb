@@ -23,4 +23,11 @@
         Dim formulario As New frm_Examen
         formulario.Show()
     End Sub
+
+    Private Sub CitaMédicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitaMédicaToolStripMenuItem.Click
+        Dim formulario As New frm_Cita
+        formulario.Show()
+    End Sub
+
+
 End Class

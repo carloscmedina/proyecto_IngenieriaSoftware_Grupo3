@@ -28,6 +28,10 @@ Public Class frm_Personas
             Dim frm As frm_Examen = CType(Owner, frm_Examen)
             frm.txt_IdEmpleado.Text = dgv_Personas.CurrentRow.Cells(0).Value.ToString()
             frm.txt_Empleado.Text = dgv_Personas.CurrentRow.Cells(2).Value.ToString()
+        ElseIf Application.OpenForms().OfType(Of frm_Cita).Any Then
+            Dim frm As frm_Cita = CType(Owner, frm_Cita)
+            frm.txt_IdEmpleado.Text = dgv_Personas.CurrentRow.Cells(0).Value.ToString()
+            frm.txt_NombreEmpleado.Text = dgv_Personas.CurrentRow.Cells(2).Value.ToString()
         End If
 
         'frm.txt_IdEmpleado.Text = dgv_Personas.CurrentRow.Cells(0).Value.ToString()

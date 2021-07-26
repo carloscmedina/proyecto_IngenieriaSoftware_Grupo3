@@ -86,6 +86,7 @@ Partial Class frm_Examen
         '
         Me.txt_Medico.Location = New System.Drawing.Point(199, 88)
         Me.txt_Medico.Name = "txt_Medico"
+        Me.txt_Medico.ReadOnly = True
         Me.txt_Medico.Size = New System.Drawing.Size(319, 27)
         Me.txt_Medico.TabIndex = 16
         '
@@ -117,6 +118,7 @@ Partial Class frm_Examen
         '
         Me.txt_Empleado.Location = New System.Drawing.Point(199, 51)
         Me.txt_Empleado.Name = "txt_Empleado"
+        Me.txt_Empleado.ReadOnly = True
         Me.txt_Empleado.Size = New System.Drawing.Size(319, 27)
         Me.txt_Empleado.TabIndex = 10
         '
