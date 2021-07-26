@@ -28,15 +28,16 @@ Partial Class frm_MenuPrincipal
         Me.MantenimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MédicosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteSíntomaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExamenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CitaMédicaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpedienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpedienteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ReporteSíntomaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +62,7 @@ Partial Class frm_MenuPrincipal
         'CerrarProgramaToolStripMenuItem
         '
         Me.CerrarProgramaToolStripMenuItem.Name = "CerrarProgramaToolStripMenuItem"
-        Me.CerrarProgramaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CerrarProgramaToolStripMenuItem.Size = New System.Drawing.Size(202, 26)
         Me.CerrarProgramaToolStripMenuItem.Text = "Cerrar programa"
         '
         'MantenimientosToolStripMenuItem
@@ -74,27 +75,44 @@ Partial Class frm_MenuPrincipal
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'MédicosToolStripMenuItem
         '
         Me.MédicosToolStripMenuItem.Name = "MédicosToolStripMenuItem"
-        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.MédicosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.MédicosToolStripMenuItem.Text = "Médicos"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(163, 6)
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(166, 26)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ProcesosToolStripMenuItem
         '
-        Me.ProcesosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteSíntomaToolStripMenuItem, Me.CitaMédicaToolStripMenuItem, Me.ExpedienteToolStripMenuItem})
+        Me.ProcesosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteSíntomaToolStripMenuItem, Me.ExamenToolStripMenuItem, Me.CitaMédicaToolStripMenuItem, Me.ExpedienteToolStripMenuItem})
         Me.ProcesosToolStripMenuItem.Name = "ProcesosToolStripMenuItem"
         Me.ProcesosToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.ProcesosToolStripMenuItem.Text = "Procesos"
+        '
+        'ReporteSíntomaToolStripMenuItem
+        '
+        Me.ReporteSíntomaToolStripMenuItem.Name = "ReporteSíntomaToolStripMenuItem"
+        Me.ReporteSíntomaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReporteSíntomaToolStripMenuItem.Text = "Reporte síntoma"
+        '
+        'ExamenToolStripMenuItem
+        '
+        Me.ExamenToolStripMenuItem.Name = "ExamenToolStripMenuItem"
+        Me.ExamenToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ExamenToolStripMenuItem.Text = "Examen"
         '
         'CitaMédicaToolStripMenuItem
         '
@@ -126,17 +144,6 @@ Partial Class frm_MenuPrincipal
         Me.ReporteGeneralToolStripMenuItem.Name = "ReporteGeneralToolStripMenuItem"
         Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(199, 26)
         Me.ReporteGeneralToolStripMenuItem.Text = "Reporte general"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(221, 6)
-        '
-        'ReporteSíntomaToolStripMenuItem
-        '
-        Me.ReporteSíntomaToolStripMenuItem.Name = "ReporteSíntomaToolStripMenuItem"
-        Me.ReporteSíntomaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ReporteSíntomaToolStripMenuItem.Text = "Reporte síntoma"
         '
         'frm_MenuPrincipal
         '
@@ -172,4 +179,5 @@ Partial Class frm_MenuPrincipal
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ReporteSíntomaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExamenToolStripMenuItem As ToolStripMenuItem
 End Class

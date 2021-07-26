@@ -165,4 +165,12 @@ Public Class frm_Reporte_Sintoma
             frm.ShowDialog()
         End If
     End Sub
+
+    Private Sub txt_Id_TextChanged(sender As Object, e As EventArgs) Handles txt_Id.TextChanged
+
+    End Sub
+
+    Private Sub txt_IdEmpleado_TextChanged(sender As Object, e As EventArgs) Handles txt_IdEmpleado.TextChanged
+
+    End Sub
 End Class

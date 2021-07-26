@@ -18,4 +18,9 @@
         Dim formulario As New frm_Reporte_Sintoma
         formulario.Show()
     End Sub
+
+    Private Sub ExamenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExamenToolStripMenuItem.Click
+        Dim formulario As New frm_Examen
+        formulario.Show()
+    End Sub
 End Class
